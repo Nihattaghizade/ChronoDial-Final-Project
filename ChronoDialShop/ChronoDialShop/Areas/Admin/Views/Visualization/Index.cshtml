@@ -1,0 +1,31 @@
+﻿@model List<Visualization>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Visualizations</h6>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="auto">Visualization Icon</th>
+                        <th scope="col">Visualization Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var visualization in Model)
+                    {
+                        <tr>
+                            <td style="display:flex; justify-content:center; align-items:center"><img src="~/client/image/numberdial/@visualization.Icon" /></td>
+                            <td>@visualization.Name</td>
+                            <td><a class="btn btn-sm btn-primary" asp-controller="Visualization" asp-action="Delete" asp-route-id="@visualization.Id">Delete</a></td>
+                            <td><a class="btn btn-sm btn-warning" asp-controller="Visualization" asp-action="Edit" asp-route-id="@visualization.Id">Edit</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

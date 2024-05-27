@@ -1,0 +1,43 @@
+﻿@model List<BasketItemVm>
+@{
+    decimal totalPrice = Model.Sum(x => x.Count * x.Price);
+}
+
+
+<div class="basketmaincontainer">
+    @foreach (var product in Model)
+    {
+        <div class="eachbasketproduct">
+            <div class="imagebox">
+                <img src="~/client/image/product/@product.Image" alt="">
+            </div>
+            <div class="infobox">
+                <h3 class="productname"><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
+                <div class="info">
+                    <p>Color: <span>Gold</span></p>
+                    <p>Size: <span>36mm</span></p>
+                    <p>Material: <span>Silicone</span></p>
+                </div>
+                <p class="productprice">$@product.Price</p>
+                <div class="inputcontainer">
+                    <div class="countcontainer">
+                        <button class="decreasebtn"><i class="fa-solid fa-minus"></i></button>
+                        <input type="number" name="" id="" value="0">
+                        <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button class="trash"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="basketcontainerbelow">
+    <div class="subtotalcon">
+        <p>Subtotal:</p>
+        <span>$@totalPrice</span>
+    </div>
+    <div class="buttoncon">
+        <button><div>View Cart</div></button>
+        <button><div>Check Out</div></button>
+    </div>
+</div>

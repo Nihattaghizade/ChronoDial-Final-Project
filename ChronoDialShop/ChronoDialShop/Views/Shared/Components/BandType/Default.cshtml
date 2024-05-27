@@ -1,0 +1,9 @@
+﻿@model List<BandType>
+
+@foreach (var bandType in Model)
+{
+    <a href="" class="eachbandtype">
+        <div class="bandimgbox"><img src="~/client/image/bandtype/@bandType.Icon" alt=""></div>
+        <span>@bandType.Name</span>
+    </a>
+}

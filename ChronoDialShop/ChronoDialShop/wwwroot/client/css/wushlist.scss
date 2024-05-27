@@ -1,0 +1,183 @@
+@import '../css/main.scss';
+
+.breadcrumbsection{
+
+    .breadcrumbcontainer{
+        padding: 8rem 0;
+        background-image: url('../image/breadcrumbbackgroundimg/breadcrumbimg.webp');
+        width: 100%;
+        background-attachment: fixed;
+        position: relative;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .breadcrumbinfo{
+            h1{
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            p{
+                font-size: 1rem;
+                color: #fff;
+                text-align: center;
+
+                a{
+                    transition: 0.3s ease;
+                    &:hover{
+                        color: #cbba9c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wishlistsection {
+    padding: 8rem 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .container {
+
+        .table {
+
+            .headrow {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: #F8F8F8F8;
+
+                    li {
+                        width: 15%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        list-style: none;
+                        padding: 10px;
+                        font-weight: 800;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .bodyrow {
+                .row {
+                    border: #E8E8E8E8 1px solid;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        li {
+                            width: 15%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:nth-child(1) {
+                                img {
+                                    width: 100%;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                h3 {
+                                    transition: 0.3s ease;
+
+                                    &:hover {
+                                        color: #CBBA9C;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                a {
+                                    color: #CBBA9C;
+                                    padding: 16px 8px;
+                                    border: #CBBA9C 2px solid;
+                                    transition: 0.3s ease;
+
+                                    &:hover {
+                                        background-color: #CBBA9C;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                i {
+                                    font-size: 20px;
+                                    transition: 0.3s ease;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        color: #CBBA9C;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:992px) {
+    section {
+        .container {
+
+            .headrow {
+                display: none;
+            }
+
+            .bodyrow {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                height: auto;
+                gap: 10px;
+
+                .row {
+                    width: 45%;
+                    height: auto;
+                    //border: #E8E8E8E8 2px solid !important;
+                    border: #E8E8E8E8 2px solid;
+                    ul {
+                        flex-direction: column;
+                        justify-content: center !important;
+                        padding: 0;
+
+                        li {
+                            width: 100% !important;
+                            margin: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    section {
+        .container{
+            .bodyrow{
+                .row{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

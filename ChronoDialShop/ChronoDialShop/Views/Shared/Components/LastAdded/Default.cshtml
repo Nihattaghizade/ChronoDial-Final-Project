@@ -1,0 +1,39 @@
+﻿@model List<Product>
+
+@foreach(var product in Model)
+{
+	 <div class="swiper-slide eachproduct">
+         <div class="imgbox">
+             <img class="main-image" src="~/client/image/product/@(product.ProductImages.FirstOrDefault(x => x.IsMain).Url)" alt="">
+            <img class="hover-image" src="~/client/image/product/@(product.ProductImages.FirstOrDefault(x => x.IsHover).Url)" alt="">
+         </div>
+         <div class="productinfobox">
+            <h3><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
+             <div class="productfeatures">
+                 <div class="ratingcon">
+                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                     <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+                     <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+                 </div>
+                 <div class="pricebox">
+                    @if (product.DiscountPrice > 0)
+                    {
+                        <div class="disocuntedprice">$@product.DiscountPrice</div>
+                        <del class="oldprice">$@product.SellPrice</del>
+                    }
+                    else
+                    {
+                        <div class="disocuntedprice">$@product.SellPrice</div>
+                    }
+                 </div>
+             </div>
+         </div>
+        <div class="productfunctions">
+            <a href=""><div class="iconbox"><i class="fa-solid fa-eye"></i></div></a>
+            <a asp-action="AddToCart" asp-controller="Product" asp-route-id="@product.Id"><div class="iconbox"><i class="fa-solid fa-cart-shopping"></i></div></a>
+            <a href=""><div class="iconbox"><i class="fa-regular fa-heart"></i></div></a>
+        </div>
+     </div>
+}

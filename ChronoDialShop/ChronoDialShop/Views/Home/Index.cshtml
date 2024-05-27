@@ -1,0 +1,104 @@
+﻿<section class="homeslidesection">
+    <div class="swiper mySwiper" id="slidecontainer">
+        <div class="swiper-wrapper" id="slideinfocontainer">
+            <div class="swiper-slide eachslide eachslidefirst">
+                <div class="eachslideinfo">
+                    <!-- <p class="discountinfo">Exclusive Offer -20% Off This Week</p> -->
+                    <h1 class="slidehead">An Extraordinary Classic</h1>
+                    <h5 class="slideinfo">
+                        Ultrices in iaculis nunc sed augue lacus viverra vitae. Ut placerat orci nulla pellentesque dignissim.</h3>
+                        <!-- <p class="pricetext">Starting At <span class="price">$1499.00</span></p> -->
+                        <a href="">Shop Now</a>
+                </div>
+                <!-- <img src="~/client/image/homeslider/homesliderimage2.webp" alt=""> -->
+            </div>
+            <div class="swiper-slide eachslide eachslidesecond">
+                <div class="eachslideinfo">
+                    <!-- <p class="discountinfo">Exclusive Offer -20% Off This Week</p> -->
+                    <h1 class="slidehead">The Watch Everyone Desire</h1>
+                    <h5 class="slideinfo">
+                        Pretium nibh ipsum consequat nisl vel. Convallis convallis tellus id interdum veli sit erica ipsum dicar.</h3>
+                        <!-- <p class="pricetext">Starting At <span class="price">$1499.00</span></p> -->
+                        <a href="">Shop Now</a>
+                </div>
+                <!-- <img src="~/client/image/homeslider/homesliderimage1.webp" alt=""> -->
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="productcategorysection">
+    <div class="container">
+        <p>ONE STEP AHEAD WITH THE RIGHT TIME.</p>
+        <h1><span>Wear</span> And <span>Feel</span> It</h1>
+        <div class="category-container">
+            <div class="categorycontainer-selection">
+                <div class="eachcategory">Breitling</div>
+                <div class="eachcategory">Hublot</div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 eachcategory-productcontainer">
+
+                @await Component.InvokeAsync("Breitling")
+
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 eachcategory-productcontainer hidden">
+
+                @await Component.InvokeAsync("Hublot")
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bandmaterialsection">
+    <div class="allcontainer">
+        <div class="backgroundimgcontainer">
+            <div class="textcontainer">
+                <p>DISPLAY YOUR DIALS!</p>
+                <h3>Watches That Add A Signature To Your Looks</h3>
+                <span>Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</span>
+                <div class="bandtypecontainer grid grid-cols-1 sm:grid-cols-2 gap-10 lg:grid-cols-2">
+                    
+                    @await Component.InvokeAsync("BandType")
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="numberdialsection">
+    <div class="container">
+        <p>How do you feel?</p>
+        <h1>Types Of <span>Dials</span></h1>
+        <div class="swiper mySwiper numberDialSwiper">
+            <div class="swiper-wrapper">
+
+                @await Component.InvokeAsync(nameof(Visualization));
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="sentencesection">
+    <h1>Feel The <span>Power</span></h1>
+</section>
+
+<section class="newproductsection">
+    <div class="container">
+        <h1>New Products</h1>
+        <div class="swiper mySwiper newproductcontainer">
+            <div class="swiper-wrapper newproductcontainerwrapper">
+                
+                @await Component.InvokeAsync("LastAdded")
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>

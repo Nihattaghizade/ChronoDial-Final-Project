@@ -1,0 +1,6 @@
+﻿@model List<Brand>
+
+@foreach(var brand in Model)
+{
+	<li data-id="@brand.Id" class="brand-item"> <label for=""> <input type="checkbox" name="" id=""> <span>@brand.Name</span> </label> </li>
+}

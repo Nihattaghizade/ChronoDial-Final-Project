@@ -1,0 +1,119 @@
+﻿@model Product
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Create Product</h6>
+                <form asp-action="Update" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" asp-for="Name" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">ItemCode</label>
+                        <input type="text" asp-for="ItemCode" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="ItemCode" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Description</label>
+                        <input type="text" asp-for="Description" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Sell Price</label>
+                        <input type="text" asp-for="SellPrice" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="SellPrice" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Discount Price</label>
+                        <input type="text" asp-for="DiscountPrice" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="DiscountPrice" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Rating</label>
+                        <input type="text" asp-for="Rating" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Main File</label>
+                        <input asp-for="MainFile" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="MainFile" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Hover File</label>
+                        <input asp-for="HoverFile" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="HoverFile" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Additional File</label>
+                        <input asp-for="Files" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="Files" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Brand</label>
+                        <select asp-for="BrandId" asp-items="@(new SelectList(ViewBag.Brands,nameof(Brand.Id),nameof(Brand.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select Category</option>
+                        </select>
+                        <span asp-validation-for="BrandId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Vendor</label>
+                        <select asp-for="VendorId" asp-items="@(new SelectList(ViewBag.Vendors,nameof(Vendor.Id),nameof(Vendor.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select Vendor</option>
+                        </select>
+                        <span asp-validation-for="VendorId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Visualization</label>
+                        <select asp-for="VisualizationId" asp-items="@(new SelectList(ViewBag.Visualizations,nameof(Visualization.Id),nameof(Visualization.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select Visualization</option>
+                        </select>
+                        <span asp-validation-for="VisualizationId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">BandType</label>
+                        <select asp-for="BandTypeId" asp-items="@(new SelectList(ViewBag.BandTypes,nameof(BandType.Id),nameof(BandType.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select BandType</option>
+                        </select>
+                        <span asp-validation-for="BandTypeId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">InnerColor</label>
+                        <select asp-for="InnerColorId" asp-items="@(new SelectList(ViewBag.InnerColors,nameof(InnerColor.Id),nameof(InnerColor.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select InnerColor</option>
+                        </select>
+                        <span asp-validation-for="InnerColorId" class="text-danger"></span>
+                    </div>
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model ProductSizeVm
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Create ProductSize</h6>
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Size</label>
+                        <select asp-for="SizeId" asp-items="@(new SelectList(ViewBag.Sizes,nameof(Size.Id),nameof(Size.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select Size</option>
+                        </select>
+                        <span asp-validation-for="SizeId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Product</label>
+                        <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.Products,nameof(Product.Id),nameof(Product.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <option selected>Select Product</option>
+                        </select>
+                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Count</label>
+                        <input type="text" asp-for="Count" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp">
+                        <span asp-validation-for="Count" class="text-danger"></span>
+                    </div>
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <button type="submit" class="btn btn-success">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

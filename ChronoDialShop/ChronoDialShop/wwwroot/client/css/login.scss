@@ -1,0 +1,130 @@
+@import '../css/main.scss';
+
+
+.breadcrumbsection{
+
+    .breadcrumbcontainer{
+        padding: 8rem 0;
+        background-image: url('../image/breadcrumbbackgroundimg/breadcrumbimg.webp');
+        width: 100%;
+        background-attachment: fixed;
+        position: relative;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .breadcrumbinfo{
+            h1{
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            p{
+                font-size: 1rem;
+                color: #fff;
+                text-align: center;
+
+                a{
+                    transition: 0.3s ease;
+                    &:hover{
+                        color: #cbba9c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loginsection{
+    padding: 8rem 0;
+    
+
+    .loginform{
+        padding: 2rem 0;
+        margin: 0 auto;
+        background-color: #F8F8F8F8;
+
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input{
+                width: 90%;
+                margin-bottom: 20px;
+                padding: 8px 0 8px 1rem;
+                border: 1px solid #E8E8E8E8;
+                &::placeholder{
+                    color: #C8C8C8C8;
+                    font-size: 10px;
+                }
+                &:focus{
+                    // outline: #CBBA9C;
+                    outline-color: #CBBA9C;
+                    outline-style:solid;
+                }
+            }
+
+            button{
+                border: #CBBA9C 1px solid;
+                padding: 15px 25px;
+                color: #CBBA9C;
+                transition: 0.3s ease;
+                margin-bottom: 1rem;
+                &:hover{
+                    color: #fff;
+                    background-color: #CBBA9C;
+                }
+            }
+
+            .more{
+                padding: 1rem 0;
+                border-top: 1px solid #000;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                transition: 0.3s ease;
+                span{
+                    font-size: 0.8rem;
+                    &:hover{
+                        color: #CBBA9C;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:576px) {
+    .loginform{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .loginform{
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .loginform{
+        width: 100%;
+        .more{
+             flex-direction: column;
+        }
+    }
+
+    .loginsection{
+        background-color: #F8F8F8F8;
+    }
+}

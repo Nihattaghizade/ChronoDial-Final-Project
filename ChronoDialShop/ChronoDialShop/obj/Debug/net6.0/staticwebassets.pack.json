@@ -1,0 +1,797 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\chart\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\chart\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\cartpage.css",
+      "PackagePath": "staticwebassets\\client\\css\\cartpage.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\cartpage.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\cartpage.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\cartpage.scss",
+      "PackagePath": "staticwebassets\\client\\css\\cartpage.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\homepage.css",
+      "PackagePath": "staticwebassets\\client\\css\\homepage.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\homepage.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\homepage.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\homepage.scss",
+      "PackagePath": "staticwebassets\\client\\css\\homepage.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\login.css",
+      "PackagePath": "staticwebassets\\client\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\login.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\login.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\login.scss",
+      "PackagePath": "staticwebassets\\client\\css\\login.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\main.css",
+      "PackagePath": "staticwebassets\\client\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\main.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\main.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\main.scss",
+      "PackagePath": "staticwebassets\\client\\css\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\productdetail.css",
+      "PackagePath": "staticwebassets\\client\\css\\productdetail.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\productdetail.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\productdetail.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\productdetail.scss",
+      "PackagePath": "staticwebassets\\client\\css\\productdetail.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\register.css",
+      "PackagePath": "staticwebassets\\client\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\register.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\register.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\register.scss",
+      "PackagePath": "staticwebassets\\client\\css\\register.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\shoppage.css",
+      "PackagePath": "staticwebassets\\client\\css\\shoppage.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\shoppage.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\shoppage.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\shoppage.scss",
+      "PackagePath": "staticwebassets\\client\\css\\shoppage.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\wushlist.css",
+      "PackagePath": "staticwebassets\\client\\css\\wushlist.css"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\wushlist.css.map",
+      "PackagePath": "staticwebassets\\client\\css\\wushlist.css.map"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\css\\wushlist.scss",
+      "PackagePath": "staticwebassets\\client\\css\\wushlist.scss"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\background\\homebackgroundimage1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\background\\homebackgroundimage1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\45d24ce3-da15-46e6-a570-aca541ca499d_leather.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\45d24ce3-da15-46e6-a570-aca541ca499d_leather.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\510586af-b631-436b-88b9-2320e735b2ff_alligator.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\510586af-b631-436b-88b9-2320e735b2ff_alligator.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\52e74d56-1f00-43e8-9c92-1d353669505e_stainlesssteel.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\52e74d56-1f00-43e8-9c92-1d353669505e_stainlesssteel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\6212a529-889c-4109-9fa0-701bd2996cdd_silicone.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\6212a529-889c-4109-9fa0-701bd2996cdd_silicone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\897ad047-7052-4815-8f73-c94fbfcf9126_bandtype3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\897ad047-7052-4815-8f73-c94fbfcf9126_bandtype3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\98b3db00-ba74-471e-bb8d-88967ef75870_bandtype3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\98b3db00-ba74-471e-bb8d-88967ef75870_bandtype3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\aaab3c34-8c12-492d-862e-6c5796bb7fb7_bandtype4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\aaab3c34-8c12-492d-862e-6c5796bb7fb7_bandtype4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\bandtype1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\bandtype1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\bandtype2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\bandtype2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\bandtype3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\bandtype3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\bandtype4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\bandtype4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\breadcrumbbackgroundimg\\breadcrumbimg.webp",
+      "PackagePath": "staticwebassets\\client\\image\\breadcrumbbackgroundimg\\breadcrumbimg.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\homeslider\\homesliderimage1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\homeslider\\homesliderimage1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\homeslider\\homesliderimage2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\homeslider\\homesliderimage2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\logo\\chronodiallogo.webp",
+      "PackagePath": "staticwebassets\\client\\image\\logo\\chronodiallogo.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\0739a1d6-294b-40cf-9870-6866638a8387_numberdial1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\0739a1d6-294b-40cf-9870-6866638a8387_numberdial1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\0e8c2949-63a0-4e2d-b957-af693e37c3f8_numberdial3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\0e8c2949-63a0-4e2d-b957-af693e37c3f8_numberdial3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\2502ebcf-4adc-47b7-8bf5-90269520aa48_numberdial4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\2502ebcf-4adc-47b7-8bf5-90269520aa48_numberdial4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\46cbced7-4e6f-4df3-a37b-8c05a9070bf7_numberdial1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\46cbced7-4e6f-4df3-a37b-8c05a9070bf7_numberdial1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\6a87153f-b534-4e15-8c22-5bb1490e84f1_numberdial4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\6a87153f-b534-4e15-8c22-5bb1490e84f1_numberdial4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\704884e9-5bbd-4382-9c00-34800828118f_numberdial1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\704884e9-5bbd-4382-9c00-34800828118f_numberdial1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\91dc6437-1e93-4f89-95c6-f41d0d5227ce_numberdial5.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\91dc6437-1e93-4f89-95c6-f41d0d5227ce_numberdial5.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\db407e67-7c2b-4b10-9b01-379f49a95361_numberdial2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\db407e67-7c2b-4b10-9b01-379f49a95361_numberdial2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\de8c7563-61b8-461a-b8b9-0b1fe3474bf1_numberdial3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\de8c7563-61b8-461a-b8b9-0b1fe3474bf1_numberdial3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\numberdial1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\numberdial1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\numberdial2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\numberdial2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\numberdial3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\numberdial3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\numberdial4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\numberdial4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\numberdial5.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\numberdial5.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\02277330-939c-4c09-a383-813145baaa83_pp-cvaa-001-5.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\02277330-939c-4c09-a383-813145baaa83_pp-cvaa-001-5.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\0c5a30ae-0cb9-46af-bc95-9a1c1c0fe838_pp-cvaa-001-3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\0c5a30ae-0cb9-46af-bc95-9a1c1c0fe838_pp-cvaa-001-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\0f86aced-e6ef-485c-be06-7cc32f0c0e25_o-dsf-001-4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\0f86aced-e6ef-485c-be06-7cc32f0c0e25_o-dsf-001-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\1b498217-a4a6-402c-ac43-64197d69ac94_b-bgt-001-2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\1b498217-a4a6-402c-ac43-64197d69ac94_b-bgt-001-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\2f4cbdb0-57cb-4603-a5be-2344f241d786_ap-roc-001-3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\2f4cbdb0-57cb-4603-a5be-2344f241d786_ap-roc-001-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\3ce7333b-8d93-4d0a-953b-8fe24617b5ff_ap-roc-001-1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\3ce7333b-8d93-4d0a-953b-8fe24617b5ff_ap-roc-001-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\43cfecb3-74b0-4990-93cd-f74dfe21fd70_pp-cvaa-001-2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\43cfecb3-74b0-4990-93cd-f74dfe21fd70_pp-cvaa-001-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\4b9d865a-96a0-4b59-b40d-d9c495febf23_o-dsf-001-2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\4b9d865a-96a0-4b59-b40d-d9c495febf23_o-dsf-001-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\4f879204-3a9f-4978-92f9-d02791f2248d_ap-roc-001-2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\4f879204-3a9f-4978-92f9-d02791f2248d_ap-roc-001-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\5f96bc7b-6f97-4472-8d59-7ec95232be27_pp-cvaa-001-4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\5f96bc7b-6f97-4472-8d59-7ec95232be27_pp-cvaa-001-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\624741fe-cf39-4bec-a3b6-66a2d6b47e71_ap-roc-001-4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\624741fe-cf39-4bec-a3b6-66a2d6b47e71_ap-roc-001-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\971c90c3-b10f-4852-a9ea-33c6a43a0f74_o-dsf-001-1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\971c90c3-b10f-4852-a9ea-33c6a43a0f74_o-dsf-001-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\9953cbe0-b61a-4bbc-a342-9e78eddf10b3_b-bgt-001-1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\9953cbe0-b61a-4bbc-a342-9e78eddf10b3_b-bgt-001-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\b3b1847f-2128-4753-b07f-3f8a8dda2d06_b-bgt-001-3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\b3b1847f-2128-4753-b07f-3f8a8dda2d06_b-bgt-001-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\ef1c9860-3aa6-434a-9163-43df47add554_pp-cvaa-001-1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\ef1c9860-3aa6-434a-9163-43df47add554_pp-cvaa-001-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\ef9199d0-e968-43ea-84dc-04aa4baeb292_b-bgt-001-4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\ef9199d0-e968-43ea-84dc-04aa4baeb292_b-bgt-001-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\f262fba6-5453-4675-9db4-c71999f598c7_o-dsf-001-3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\f262fba6-5453-4675-9db4-c71999f598c7_o-dsf-001-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\js\\homepage.js",
+      "PackagePath": "staticwebassets\\client\\js\\homepage.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\js\\main.js",
+      "PackagePath": "staticwebassets\\client\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\js\\shoppage.js",
+      "PackagePath": "staticwebassets\\client\\js\\shoppage.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChronoDialShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ChronoDialShop.props",
+      "PackagePath": "build\\ChronoDialShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ChronoDialShop.props",
+      "PackagePath": "buildMultiTargeting\\ChronoDialShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ChronoDialShop.props",
+      "PackagePath": "buildTransitive\\ChronoDialShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,80 @@
+﻿@model ProductVm
+
+<section class="breadcrumbsection">
+    <div class="breadcrumbcontainer">
+        <div class="breadcrumbinfo">
+            <h1>Product</h1>
+            <p> <a href="">Home</a> / <span>Shop</span> </p>
+        </div>
+    </div>
+</section>
+
+<section class="detailuppersection grid grid-cols-1 lg:grid-cols-2">
+    <div class="img-slidecontainer">
+        @foreach(var img in Model.Product.ProductImages)
+        {
+            <div class="imgcontainer"><img src="~client/image/product/@img.Url" alt=""></div>
+        }
+        
+        <div class="slidercontainer"></div>
+    </div>
+    <div class="productinfocontainer">
+        <h1 class="productname">@Model.Product.Name</h1>
+        <p class="productdescription">@Model.Product.Description</p>
+        <div class="ratingcontainer">
+            <div class="productrating">
+                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+                <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+            </div>
+            <p> <span>4</span> reviews</p>
+        </div>
+        <div class="productfeaturescontainer">
+            <div class="pricecontainer eachfeature">
+                <p class="featureleftword">Price</p>
+                <div class="productpricecontainer grid">
+                    <div class="disocuntedprice">$100.00</div>
+                    <del class="oldprice">$125.00</del>
+                </div>
+            </div>
+            <div class="sizecontainer eachfeature">
+                <p class="featureleftword">Size</p>
+                <div class="productsizecontainer grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="sizecon featurebox">16mm</div>
+                    <div class="sizecon featurebox">20mm</div>
+                    <div class="sizecon featurebox">24mm</div>
+                    <div class="sizecon featurebox">28mm</div>
+                    <div class="sizecon featurebox">32mm</div>
+                    <div class="sizecon featurebox">36mm</div>
+                    <div class="sizecon featurebox">40mm</div>
+                    <div class="sizecon featurebox">44mm</div>
+                </div>
+            </div>
+            <div class="bandcontainer eachfeature">
+                <p class="featureleftword">Band Material</p>
+                <div class="productbandcontainer grid grid-cols-1 gap-1 lg:grid-cols-2">
+                    <div class="bandcon featurebox">Leather</div>
+                    <div class="bandcon featurebox">Stainless Steel</div>
+                </div>
+            </div>
+            <div class="vendorcontainer eachfeature">
+                <p class="featureleftword">Vendor</p>
+                <span>Elgun</span>
+            </div>
+            <div class="quantitycontainer eachfeature">
+                <p class="featureleftword">Quantity</p>
+                <div class="inputcontainer">
+                    <button class="decreasebtn"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" name="" id="counter" min="1" value="1">
+                    <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="mainbuttoncontainer">
+            <button><div>Add To Cart</div></button>
+            <button><div>Add To Wishlist</div></button>
+        </div>
+    </div>
+</section>
