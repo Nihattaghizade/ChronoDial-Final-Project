@@ -1,12 +1,14 @@
 ﻿using ChronoDialShop.Data;
+using ChronoDialShop.Enums;
 using ChronoDialShop.Extentions;
 using ChronoDialShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-
+[Authorize(Roles = "Admin")]
 public class ProductController : Controller
 {
     private readonly AppDbContext _context;
@@ -137,9 +139,11 @@ public class ProductController : Controller
     public async Task<IActionResult> Detail(int? id)
     {
         if (id == null || id <= 0) return BadRequest();
-        var product = await _context.Products.Include(x => x.Brand)
-            .Include(x => x.ProductSize).Include(x => x.ProductImages)
-                                             //.Include(nameof(ProductSize.Size))
+        var product = await _context.Products.Include(x => x.Brand).Include(x => x.ProductImages)
+                                             .Include(x => x.BandType)
+                                             .Include(x => x.InnerColor)
+                                             .Include(x => x.Visualization)
+                                             .Include(x => x.Vendor)
                                              .FirstOrDefaultAsync(x => x.Id == id);
         if (product == null) return NotFound();
         return View(product);
@@ -152,7 +156,8 @@ public class ProductController : Controller
         ViewBag.Sizes = await _context.Sizes.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.Vendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.Visualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
-        ViewBag.BandType = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+        ViewBag.BandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+        ViewBag.InnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
         var product = await _context.Products.Include(x => x.ProductImages)
                                              .Include(x => x.Brand)
                                              .FirstOrDefaultAsync(x => x.Id == id);
@@ -282,4 +287,5 @@ public class ProductController : Controller
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
+
 }

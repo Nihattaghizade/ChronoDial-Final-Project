@@ -1,11 +1,13 @@
 ﻿using ChronoDialShop.Data;
+using ChronoDialShop.Enums;
 using ChronoDialShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-
+[Authorize(Roles = "Admin")]
 public class BrandController : Controller
 {
     private readonly AppDbContext _context;

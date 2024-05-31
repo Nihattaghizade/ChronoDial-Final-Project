@@ -1,0 +1,11 @@
+﻿@model List<InnerColor>
+
+@foreach (var innerColor in Model)
+{
+    <li data-id="@innerColor.Id" class="innerColor-item">
+        <label for="innerColor-@innerColor.Id">
+            <input type="checkbox" name="InnerColorsIds" id="innerColor-@innerColor.Id" value="@innerColor.Id">
+            <span>@innerColor.Name</span>
+        </label>
+    </li>
+}

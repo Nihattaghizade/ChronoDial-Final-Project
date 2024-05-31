@@ -104,7 +104,15 @@
             <div class="desktopheader-right">
                 <button class="searchButton mobileheader-button"> <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i> </button>
                 <a href="" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
-                <a href="" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a asp-action="LogOut" asp-controller="Account" class="mobileheader-button"> <span style="color:aliceblue;">@User.Identity.Name</span> <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> </a>
+                }
+                else
+                {
+                    <a asp-action="Login" asp-controller="Account" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a>
+                }
+                
                 <!-- <button class="cart"> <div class="countbox"> <span class="count">1</span> </div> <div class="cartbuttondiv"><i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i></div> <span class="totalprice"> $110.00  <i class="fa-solid fa-chevron-down fa-2xs" style="color: #cbba9c;"></i> </span> </button> -->
                 <button class="mobileheader-button cart-button"> <i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i> </button>
             </div>
@@ -223,6 +231,7 @@
     </footer>
     <!-- FooterEnd -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     <script src="~/client/js/homepage.js"></script>

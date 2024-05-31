@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6LXzbosRFTJUfOeIOnyIjb4qc7FIj7yGwWR+sQp1doVtTu0/7ShsLowQ6/RAoRyynlutg+2dHuljHQ1DEc3/Dg==",
+  "dgSpecHash": "nROFn2Mkvi09tYvP2NQDWpK5ELAYkopcONkj4ENi+Du721eDchDOZJwZTLlW/lNDwp9NwQd1tdGCfqg8x4FHvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
+  "projectFilePath": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\99450\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\99450\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

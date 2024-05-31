@@ -1,12 +1,14 @@
 ﻿using ChronoDialShop.Areas.Admin.ViewModels;
 using ChronoDialShop.Data;
+using ChronoDialShop.Enums;
 using ChronoDialShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-
+[Authorize(Roles = "Admin")]
 public class ProductSizeController : Controller
 {
     private readonly AppDbContext _context;

@@ -1,0 +1,84 @@
+﻿@model Product
+
+<div class="container-fluid pt-4 px-4">
+<div class="row">
+        <div class="col-12">
+            <div class="bg-secondary rounded h-100 p-4">
+                <div class="mb-4 row g-4">
+                    @foreach (var item in @Model.ProductImages)
+                    {
+                        <div class="col-3">
+                            <img style="width:200px;" src="~/client/image/product/@(item.Url)" />
+                        </div>
+                    }
+                </div>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="true">
+                            Info Main
+                        </button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile" type="button" role="tab"
+                                aria-controls="nav-profile" aria-selected="false">
+                            Info Price
+                        </button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab"
+                                aria-controls="nav-contact" aria-selected="false">
+                            Other Infos
+                        </button>
+                    </div>
+                </nav>
+                <div class="tab-content pt-3" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Product Description</th>
+                                    <th scope="col">Product Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.Name</td>
+                                    <td>@Model.Description</td>
+                                    <td>@Model.ItemCode</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col">Product Price</th>
+                                    @if(Model.DiscountPrice > 0)
+                                    {
+                                        <th scope="col">Product DiscountPrice</th>
+                                    }
+                                    <th scope="col">Product Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.SellPrice</td>
+                                    @if (Model.DiscountPrice > 0)
+                                    {
+                                        <td>@Model.DiscountPrice</td>
+                                    }
+                                    <td>@Model.Rating</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        Sit consetetur eirmod lorem ea magna sadipscing ipsum elitr invidunt, dolores lorem erat ipsum ut aliquyam eos lorem sed. Nonumy aliquyam ea justo eos dolores dolores duo dolores. Aliquyam dolor sea dolores sit takimata no erat vero. At lorem justo tempor lorem duo, stet kasd aliquyam ipsum voluptua labore at.
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>

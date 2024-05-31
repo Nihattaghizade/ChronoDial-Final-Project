@@ -1,0 +1,11 @@
+﻿@model List<BandType>
+
+@foreach (var bandType in Model)
+{
+	<li data-id="@bandType.Id" class="bandType-item"> 
+            <input type="checkbox" name="BandTypesIds" id="bandType-@bandType.Id" value="@bandType.Id"> 
+        <label for="bandType-@bandType.Id"> 
+            <span>@bandType.Name</span> 
+        </label> 
+    </li>
+}

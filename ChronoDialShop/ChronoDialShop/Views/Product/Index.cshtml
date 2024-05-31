@@ -18,40 +18,35 @@
                     <div class="eachfilterinnercontainer">Brands <i class="fa-solid fa-chevron-down"></i> </div>
                     <ul class="eachfilterlist">
 
-                        @await Component.InvokeAsync(nameof(Brand))
+                    @await Component.InvokeAsync("Brand")
 
                     </ul>
                 </div>
                 <div class="eachfiltercontainer">
                     <div class="eachfilterinnercontainer">Band Material <i class="fa-solid fa-chevron-down"></i></div>
                     <ul class="eachfilterlist">
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Avqa</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Bvfd</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Ccs</span> </label> </li>
+
+                    @await Component.InvokeAsync("BandTypeShop")
+
                     </ul>
+                   
                 </div>
                 <div class="eachfiltercontainer">
                     <div class="eachfilterinnercontainer">Inner Color <i class="fa-solid fa-chevron-down"></i></div>
                     <ul class="eachfilterlist">
-
-                        @*@await Component.InvokeAsync(nameof(InnerColor))*@
-
+                    @await Component.InvokeAsync("InnerColorShop")
                     </ul>
                 </div>
                 <div class="eachfiltercontainer">
                     <div class="eachfilterinnercontainer">Visualization <i class="fa-solid fa-chevron-down"></i></div>
                     <ul class="eachfilterlist">
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Avqa</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Bvfd</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Ccs</span> </label> </li>
+                     @await Component.InvokeAsync("VisualizationShop")
                     </ul>
                 </div>
                 <div class="eachfiltercontainer">
                     <div class="eachfilterinnercontainer">Vendor <i class="fa-solid fa-chevron-down"></i></div>
                     <ul class="eachfilterlist">
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Avqa</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Bvfd</span> </label> </li>
-                        <li> <label for=""> <input type="checkbox" name="" id=""> <span>Ccs</span> </label> </li>
+                     @await Component.InvokeAsync("VendorShop")
                     </ul>
                 </div>
                 @*<div class="eachfiltercontainer">
@@ -70,36 +65,27 @@
                         <div class="sortallcontainer">
                             <div class="sortcontainer"><p>Sort:</p> <i class="fa-solid fa-chevron-down"></i></div>
                             <ul class="allsortlist hidden">
-                                <li>
+                                <li id="1">
                                     <label for="Filter-title-ascending-1">
                                         <input type="radio" id="Filter-title-ascending-1"> <span>Alphabetically, A-Z</span>
                                     </label>
                                 </li>
-                                <li>
+                                <li id="2">
                                     <label for="Filter-title-descending-2">
                                         <input type="radio" id="Filter-title-descending-2"> <span>Alphabetically, Z-A</span>
                                     </label>
                                 </li>
-                                <li>
+                                <li id="3">
                                     <label for="Filter-price-ascending-3">
                                         <input type="radio" id="Filter-price-ascending-3"> <span>Price, low to high</span>
                                     </label>
                                 </li>
-                                <li>
+                                <li id="4">
                                     <label for="Filter-price-descending-4">
                                         <input type="radio" id="Filter-price-descending-4"> <span>Price, high to low</span>
                                     </label>
                                 </li>
-                                <li>
-                                    <label for="Filter-rating-ascending-5">
-                                        <input type="radio" id="Filter-rating-ascending-5"> <span>Rating, low to high</span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="Filter-rating-descending-6">
-                                        <input type="radio" id="Filter-rating-descending-6"> <span>Rating, low to high</span>
-                                    </label
-                                ></li>
+                                
                             </ul>
                         </div>
                         <p> <span>18</span> Products </p>
@@ -107,8 +93,9 @@
                 </div>
                 <div class="resultcontainer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 productscontainer">
                     
-                   @await Component.InvokeAsync("ProductMain");
+                  @* @await Component.InvokeAsync("ProductMain");*@
 
+                   @await Html.PartialAsync("_ProductPartial", Model)
                 </div>
                 @*<div class="paginationcontainer">
                     <ul>
@@ -144,24 +131,103 @@
 </section>
 
 
+@*<li>
+                                    <label for="Filter-rating-ascending-5">
+                                        <input type="radio" id="Filter-rating-ascending-5"> <span>Rating, low to high</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="Filter-rating-descending-6">
+                                        <input type="radio" id="Filter-rating-descending-6"> <span>Rating, low to high</span>
+                                    </label
+                                ></li>*@
+
+
 @section Scripts {
     <script>
-        var cat = document.querySelectorAll(".brand-item");
+        //document.querySelectorAll(".brand-item").forEach(brand => {
+        //    var id = brand.dataset.id;
 
-        cat.forEach(brand => {
-            var id = brand.dataset.id;
-            
-            brand.addEventListener("click", (e) => {
-                console.log(id);
-                e.preventDefault();
-                console.log("clicked")
-                fetch(`/Product/ProductBrandFilter?id=${id}`)
-                    .then(x => x.text())
-                    .then(x => {
-                        document.querySelector(".productscontainer").innerHTML = x;
-                    })
+        function getFilterDto() {
+            var brandsIds = [];
+            var vendorsIds = [];
+            var bandTypesIds = [];
+            var visualizationsIds = [];
+            var innerColorsIds = [];
+
+            $("input[name='BrandsIds']:checked").each(function () {
+                brandsIds.push(parseInt($(this).val()));
             });
-        })
+            $("input[name='VendorsIds']:checked").each(function () {
+                vendorsIds.push(parseInt($(this).val()));
+            });
+            $("input[name='BandTypesIds']:checked").each(function () {
+                bandTypesIds.push(parseInt($(this).val()));
+            });
+            $("input[name='VisualizationsIds']:checked").each(function () {
+                visualizationsIds.push(parseInt($(this).val()));
+            });
+            $("input[name='InnerColorsIds']:checked").each(function () {
+                innerColorsIds.push(parseInt($(this).val()));
+            });
+
+            var minPrice = parseInt($("#slider-min-price").val());
+            var maxPrice = parseInt($("#slider-max-price").val());
+
+            return {
+                BrandsIds: brandsIds,
+                VendorsIds: vendorsIds,
+                BandTypesIds: bandTypesIds,
+                VisualizationsIds: visualizationsIds,
+                InnerColorsIds: innerColorsIds,
+                MinPrice: isNaN(minPrice) ? 0 : minPrice,
+                MaxPrice: isNaN(maxPrice) ? 20000 : maxPrice,
+            };
+        }
+
+
+
+        const sendRequest = async (sortId) => {
+            const abc = getFilterDto();
+
+            try {
+                const response = await fetch(`/Product/SortProducts/${sortId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: abc
+                });
+
+                if (response.ok) {
+                    const data = await response.text();
+                    console.log(data);
+                    document.querySelector(".productscontainer").innerHTML = data;
+                } else {
+                    console.error('Failed to fetch sorted products');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        // Add event listeners to all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('click', async () => {
+                await sendRequest(checkbox.value);
+            });
+        });
+
+        // Add event listeners to all radio buttons
+        document.querySelectorAll('.allsortlist input[type="radio"]').forEach(radio => {
+            radio.addEventListener('click', async (e) => {
+                const sortId = e.target.closest('li').id;
+                await sendRequest(sortId);
+            });
+        });
+
+
+
     </script>
 }
 

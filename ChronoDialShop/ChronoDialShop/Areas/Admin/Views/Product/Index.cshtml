@@ -22,9 +22,9 @@
                             <td><img width="100" src="~/client/image/product/@(product.ProductImages.FirstOrDefault(x => x.IsMain).Url)" /></td>
                             <td>@product.Name</td>
                             <td>@product.Brand.Name</td>
-                            <td><a class="btn btn-sm btn-primary" asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id">Delete</a></td>
-                            <td><a class="btn btn-sm btn-warning" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id">Edit</a></td>
-                            <td><a class="btn btn-sm btn-info" asp-controller="Product" asp-action="Detail" asp-roure-id="@product.Id">Detail</a></td>
+                            <td><a class="btn btn-sm btn-primary" asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" asp-area="Admin">Delete</a></td>
+                            <td><a class="btn btn-sm btn-warning" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" asp-area="Admin">Edit</a></td>
+                            <td><a class="btn btn-sm btn-info" asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id" asp-area="Admin">Detail</a></td>
                         </tr>
                     }
                 </tbody>

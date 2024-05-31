@@ -1,12 +1,14 @@
 ﻿using ChronoDialShop.Data;
+using ChronoDialShop.Enums;
 using ChronoDialShop.Extentions;
 using ChronoDialShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-
+[Authorize(Roles = "Admin")]
 public class BandTypeController : Controller
 {
     private readonly AppDbContext _context;

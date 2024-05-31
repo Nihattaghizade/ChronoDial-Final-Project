@@ -1,0 +1,11 @@
+﻿@model List<Visualization>
+
+@foreach (var visualization in Model)
+{
+    <li data-id="@visualization.Id" class="visualization-item">
+        <label for="visualization-@visualization.Id">
+            <input type="checkbox" name="VisualizationsIds" id="visualization-@visualization.Id" value="@visualization.Id">
+            <span>@visualization.Name</span>
+        </label>
+    </li>
+}

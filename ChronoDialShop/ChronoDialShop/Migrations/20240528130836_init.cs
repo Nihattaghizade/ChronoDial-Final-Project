@@ -102,6 +102,7 @@ namespace ChronoDialShop.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SoftDelete = table.Column<bool>(type: "bit", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ItemCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<double>(type: "float", nullable: true),
                     SellPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),

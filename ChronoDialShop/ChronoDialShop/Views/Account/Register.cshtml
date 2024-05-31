@@ -1,0 +1,42 @@
+﻿@model RegisterVm
+
+<section class="breadcrumbsection">
+    <div class="breadcrumbcontainer">
+        <div class="breadcrumbinfo">
+            <h1>Collection</h1>
+            <p> <a href="">Home</a> / <span>Shop</span> </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="registersection">
+    <div class="registerform">
+        <h1>Register</h1>
+        <form method="post" asp-action="Register">
+            <input asp-for="Name" placeholder=" NAME">
+            <span class="text-danger" asp-validation-for="Name"></span>
+            <input asp-for="Surname" placeholder=" SURNAME">
+            <span class="text-danger" asp-validation-for="Surname"></span>
+            <input asp-for="Username" placeholder=" USERNAME">
+            <span class="text-danger" asp-validation-for="Username"></span>
+            <input asp-for="Email" placeholder=" EMAIL">
+            <span class="text-danger" asp-validation-for="Email"></span>
+            <input asp-for="Password" placeholder=" PASSWORD">
+            <span class="text-danger" asp-validation-for="Password"></span>
+            <input asp-for="ConfirmPassword" placeholder=" CONFIRM PASSWORD">
+            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+            <div class="iamVendor">
+                <input asp-for="IsVendor" id="VendorSec" style="width: 20px;">
+                <label for="VendorSec">I am Vendor</label>
+            </div>
+            <div class="text-danger" asp-validation-summary="ModelOnly" style="font-size:9x; color:orangered; text-align:center; margin-bottom:1rem;"></div>
+            <button type="submit">SIGN IN</button>
+            <div class="more">
+                <span><a href=""> Login Account</a></span>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+﻿@model LoginVm
+
+
+
+@TempData["VerifyEmail"]
+<section class="breadcrumbsection">
+    <div class="breadcrumbcontainer">
+        <div class="breadcrumbinfo">
+            <h1>Collection</h1>
+            <p> <a href="">Home</a> / <span>Shop</span> </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="loginsection">
+    <div class="loginform">
+        <h1>LOGIN</h1>
+        <form method="post" asp-action="Login">
+            <input asp-for="Email" placeholder=" EMAIL">
+            <span class="text-danger" asp-validation-for="Email"></span>
+            <input asp-for="Password" placeholder=" PASSWORD">
+            <span class="text-danger" asp-validation-for="Password"></span>
+            <div class="text-danger" asp-validation-summary="ModelOnly" style="font-size:9x; color:orangered; text-align:center; margin-bottom:1rem;"></div>
+            <button type="submit">SIGN IN</button>
+            <div class="more">
+                <span>Forgot Your Password?</span>
+                <span><a href=""> Create Account</a></span>
+            </div>
+        </form>
+    </div>
+</section>

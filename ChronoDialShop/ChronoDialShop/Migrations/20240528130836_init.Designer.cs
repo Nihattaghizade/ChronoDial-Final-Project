@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChronoDialShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240520001002_update_product_table")]
-    partial class update_product_table
+    [Migration("20240528130836_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

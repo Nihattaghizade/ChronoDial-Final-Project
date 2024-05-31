@@ -2,5 +2,10 @@
 
 @foreach(var brand in Model)
 {
-	<li data-id="@brand.Id" class="brand-item"> <label for=""> <input type="checkbox" name="" id=""> <span>@brand.Name</span> </label> </li>
+    <li data-id="@brand.Id" class="brand-item">
+        <label for="brand-@brand.Id">
+            <input type="checkbox" name="BrandsIds" id="brand-@brand.Id" value="@brand.Id">
+            <span>@brand.Name</span>
+        </label>
+    </li>
 }

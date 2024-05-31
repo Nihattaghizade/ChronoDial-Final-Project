@@ -1,5 +1,6 @@
 using ChronoDialShop.Data;
 using ChronoDialShop.Models;
+using ChronoDialShop.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,7 +12,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(x =>
 					  x.UseSqlServer(builder.Configuration.GetConnectionString("mssql")));
-//builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ILayoutService, LayoutService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 {
@@ -20,11 +24,12 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 	options.Password.RequiredLength = 8;
 	options.Password.RequireUppercase = true;
 	options.Password.RequireNonAlphanumeric = true;
-	//options.Lockout.AllowedForNewUsers = false;
-	//options.Lockout.MaxFailedAccessAttempts = 5;
-	//options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-	//options.SignIn.RequireConfirmedEmail = true;
-}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+	options.Lockout.AllowedForNewUsers = false;
+	options.Lockout.MaxFailedAccessAttempts = 5;
+	options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+	options.SignIn.RequireConfirmedEmail = true;
+}).AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -41,7 +46,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-//app.UseAuthentication();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

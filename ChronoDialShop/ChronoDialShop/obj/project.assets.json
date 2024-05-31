@@ -10866,11 +10866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
+      "projectUniqueName": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
       "projectName": "ChronoDialShop",
-      "projectPath": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
+      "projectPath": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\ChronoDialShop.csproj",
       "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\source\\repos\\ChronoDialShop\\ChronoDialShop\\obj\\",
+      "outputPath": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
