@@ -1,4 +1,9 @@
 ﻿@model ProductVm
+@{
+    double rating = Model.Product.Rating;
+    int fullStars = (int)rating;
+    bool halfStar = rating - fullStars >= 0.5;
+}
 
 <section class="breadcrumbsection">
     <div class="breadcrumbcontainer">
@@ -11,57 +16,101 @@
 
 <section class="detailuppersection grid grid-cols-1 lg:grid-cols-2">
     <div class="img-slidecontainer">
-        @foreach(var img in Model.Product.ProductImages)
-        {
-            <div class="imgcontainer"><img src="~client/image/product/@img.Url" alt=""></div>
-        }
+
+        <div class="imgcontainer">
+            <!-- <img src="./image/product/productimage.webp" alt=""> -->
+
+            <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    @foreach (var img in Model.Product.ProductImages)
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/client/image/product/@(img.Url)" />
+                        </div>
+                    }
+                    
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div thumbsSlider="" class="swiper mySwiper" style="margin-top: 1rem;">
+                <div class="swiper-wrapper">
+
+                    @foreach (var img in Model.Product.ProductImages)
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/client/image/product/@(img.Url)" />
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
         
-        <div class="slidercontainer"></div>
+        
     </div>
     <div class="productinfocontainer">
         <h1 class="productname">@Model.Product.Name</h1>
         <p class="productdescription">@Model.Product.Description</p>
         <div class="ratingcontainer">
             <div class="productrating">
-                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
-                <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+
+                @for (int i = 0; i < fullStars; i++)
+                {
+                    <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                }
+
+                @if (halfStar)
+                {
+                    <i class="fa-solid fa-star-half-stroke" style="color: #cbba9c;"></i>
+                }
+
+                @for (int i = fullStars + (halfStar ? 1 : 0); i < 5; i++)
+                {
+                    <i class="fa-regular fa-star" style="color: #cbba9c;"></i>
+                }
+
             </div>
-            <p> <span>4</span> reviews</p>
+            @*<p> <span>4</span> reviews</p>*@
         </div>
         <div class="productfeaturescontainer">
             <div class="pricecontainer eachfeature">
                 <p class="featureleftword">Price</p>
                 <div class="productpricecontainer grid">
-                    <div class="disocuntedprice">$100.00</div>
-                    <del class="oldprice">$125.00</del>
+                    @if(Model.Product.DiscountPrice > 0)
+                    {
+                        <div class="disocuntedprice">$@Model.Product.DiscountPrice</div>
+                        <del class="oldprice">$@Model.Product.SellPrice</del>
+                    }
+                    else
+                    {
+                        <div class="disocuntedprice">$@Model.Product.SellPrice</div>
+                    }
                 </div>
             </div>
             <div class="sizecontainer eachfeature">
                 <p class="featureleftword">Size</p>
                 <div class="productsizecontainer grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="sizecon featurebox">16mm</div>
-                    <div class="sizecon featurebox">20mm</div>
-                    <div class="sizecon featurebox">24mm</div>
-                    <div class="sizecon featurebox">28mm</div>
-                    <div class="sizecon featurebox">32mm</div>
-                    <div class="sizecon featurebox">36mm</div>
-                    <div class="sizecon featurebox">40mm</div>
-                    <div class="sizecon featurebox">44mm</div>
+                    @foreach(var size in Model.Product.ProductSize)
+                    {
+                        <div class="sizecon featurebox">@size.Size.Name</div>
+                    }
+                   
+                    
                 </div>
             </div>
             <div class="bandcontainer eachfeature">
                 <p class="featureleftword">Band Material</p>
                 <div class="productbandcontainer grid grid-cols-1 gap-1 lg:grid-cols-2">
-                    <div class="bandcon featurebox">Leather</div>
-                    <div class="bandcon featurebox">Stainless Steel</div>
+                    <div class="bandcon featurebox">@Model.Product.BandType.Name</div>
                 </div>
             </div>
             <div class="vendorcontainer eachfeature">
                 <p class="featureleftword">Vendor</p>
-                <span>Elgun</span>
+                <span>@Model.Product.Vendor.Name</span>
             </div>
             <div class="quantitycontainer eachfeature">
                 <p class="featureleftword">Quantity</p>
@@ -78,3 +127,26 @@
         </div>
     </div>
 </section>
+
+@section Scripts{
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+}

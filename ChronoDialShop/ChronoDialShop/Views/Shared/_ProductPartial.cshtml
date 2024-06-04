@@ -1,5 +1,6 @@
 ﻿@model List<Product>
 
+
 @foreach (var product in Model)
 {
     <div class="eachproduct">
@@ -31,7 +32,7 @@
             </div>
         </div>
         <div class="productfunctions">
-            <a href=""><div class="iconbox"><i class="fa-solid fa-eye"></i></div></a>
+            @*<a href=""><div class="iconbox"><i class="fa-solid fa-eye"></i></div></a>*@
             <a asp-action="AddToCart" asp-controller="Product" asp-route-id="@product.Id"><div class="iconbox"><i class="fa-solid fa-cart-shopping"></i></div></a>
             <a href=""><div class="iconbox"><i class="fa-regular fa-heart"></i></div></a>
         </div>

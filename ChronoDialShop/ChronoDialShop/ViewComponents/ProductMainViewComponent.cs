@@ -14,78 +14,142 @@ public class ProductMainViewComponent : ViewComponent
         _context = context;
     }
 
-    public async Task<IViewComponentResult> InvokeAsync()
-    {
-		//var products = _context.Products
-		//    .Include(x => x.Brand)
-		//    .Include(x => x.ProductImages);
+    //   public async Task<IViewComponentResult> InvokeAsync()
+    //   {
+    //	//var products = _context.Products
+    //	//    .Include(x => x.Brand)
+    //	//    .Include(x => x.ProductImages);
 
-		//var count = GetPageCount(pageSize);
-		//PaginateVm paginateVm = new PaginateVm()
-		//{
-		//    CurrentPage = page,
-		//    TotalPageCount = count,
-		//};
-		//if (brandId == null)
-		//{
-		//    var orderedWithCatProducts = await products.Skip((page - 1) * pageSize)
-		//                                               .Take(pageSize)
-		//                                               .OrderByDescending(x => x.Id)
-		//                                               .ToListAsync();
+    //	//var count = GetPageCount(pageSize);
+    //	//PaginateVm paginateVm = new PaginateVm()
+    //	//{
+    //	//    CurrentPage = page,
+    //	//    TotalPageCount = count,
+    //	//};
+    //	//if (brandId == null)
+    //	//{
+    //	//    var orderedWithCatProducts = await products.Skip((page - 1) * pageSize)
+    //	//                                               .Take(pageSize)
+    //	//                                               .OrderByDescending(x => x.Id)
+    //	//                                               .ToListAsync();
 
-		//    paginateVm.Products = orderedWithCatProducts;
+    //	//    paginateVm.Products = orderedWithCatProducts;
 
-		//    return View(paginateVm);
-		//}
-		//if (productName != null)
-		//{
-		//    paginateVm.Products = await products.Skip((page - 1) * pageSize)
-		//                                        .Take(pageSize)
-		//                                        .Where(x => x.BrandId == brandId && x.Name.StartsWith(productName))
-		//                                        .OrderByDescending(x => x.Id)
-		//                                        .ToListAsync();
-		//    return View(paginateVm);
-		//}
-		//var orderedProducts = await products.Skip((page - 1) * pageSize)
-		//                                        .Take(pageSize)
-		//                                        .Where(x => x.BrandId == brandId)
-		//                                        .OrderByDescending(x => x.Id)
-		//                                        .ToListAsync();
+    //	//    return View(paginateVm);
+    //	//}
+    //	//if (productName != null)
+    //	//{
+    //	//    paginateVm.Products = await products.Skip((page - 1) * pageSize)
+    //	//                                        .Take(pageSize)
+    //	//                                        .Where(x => x.BrandId == brandId && x.Name.StartsWith(productName))
+    //	//                                        .OrderByDescending(x => x.Id)
+    //	//                                        .ToListAsync();
+    //	//    return View(paginateVm);
+    //	//}
+    //	//var orderedProducts = await products.Skip((page - 1) * pageSize)
+    //	//                                        .Take(pageSize)
+    //	//                                        .Where(x => x.BrandId == brandId)
+    //	//                                        .OrderByDescending(x => x.Id)
+    //	//                                        .ToListAsync();
 
-		//paginateVm.Products=orderedProducts;
-		//return View(paginateVm);
-
-
-		//if (brandId == null)
-		//{
-		//    return View(await _context.Products
-		//        .Take(20)
-		//        .Include(x => x.Brand)
-		//        .Include(x => x.ProductImages).ToListAsync());
-		//}
-		//var products = await _context.Products.Where(x => x.BrandId == brandId)
-		//    .Take(20)
-		//    .Include(x => x.Brand)
-		//    .Include(x => x.ProductImages).ToListAsync();
-
-		//return View(products);
+    //	//paginateVm.Products=orderedProducts;
+    //	//return View(paginateVm);
 
 
-		var products = await _context.Products
-		   .Include(x => x.ProductImages)
-								.Include(x => x.Brand)
-								.Include(x => x.BandType)
-								.Include(x => x.Vendor)
-								.Include(x => x.InnerColor)
-								.Include(x => x.Visualization)
-		   .Where(x => !x.SoftDelete).ToListAsync();
+    //	//if (brandId == null)
+    //	//{
+    //	//    return View(await _context.Products
+    //	//        .Take(20)
+    //	//        .Include(x => x.Brand)
+    //	//        .Include(x => x.ProductImages).ToListAsync());
+    //	//}
+    //	//var products = await _context.Products.Where(x => x.BrandId == brandId)
+    //	//    .Take(20)
+    //	//    .Include(x => x.Brand)
+    //	//    .Include(x => x.ProductImages).ToListAsync();
 
-		return View(products);
-	}
+    //	//return View(products);
+
+
+    //	var products = await _context.Products
+    //	   .Include(x => x.ProductImages)
+    //							.Include(x => x.Brand)
+    //							.Include(x => x.BandType)
+    //							.Include(x => x.Vendor)
+    //							.Include(x => x.InnerColor)
+    //							.Include(x => x.Visualization)
+    //	   .Where(x => !x.SoftDelete).ToListAsync();
+
+    //	return View(products);
+    //}
 
     //public int GetPageCount(int pageSize)
     //{
     //    var productCount = _context.Products.Count();
     //    return (int)Math.Ceiling((decimal)productCount / pageSize);
     //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public async Task<IViewComponentResult> InvokeAsync(int? categoryId, string productName, int page = 1, int pageSize = 1)
+    {
+        var products = _context.Products
+            .Include(x => x.Brand)
+            .Include(x => x.ProductImages);
+
+        var count = GetPageCount(pageSize);
+        PaginateVm paginateVm = new PaginateVm()
+        {
+            CurrentPage = page,
+            TotalPageCount = count,
+        };
+        if (categoryId == null)
+        {
+            var orderedWithCatProducts = await products.Skip((page - 1) * pageSize)
+                                                       .Take(pageSize)
+                                                       .OrderByDescending(x => x.Id)
+                                                       .ToListAsync();
+
+            paginateVm.Products = orderedWithCatProducts;
+
+            return View(paginateVm);
+        }
+        if (productName != null)
+        {
+            paginateVm.Products = await products.Skip((page - 1) * pageSize)
+                                                .Take(pageSize)
+                                                .Where(x => x.BrandId == categoryId && x.Name.StartsWith(productName))
+                                                .OrderByDescending(x => x.Id)
+                                                .ToListAsync();
+            return View(paginateVm);
+        }
+        var orderedProducts = await products.Skip((page - 1) * pageSize)
+                                                .Take(pageSize)
+                                                .Where(x => x.BrandId == categoryId)
+                                                .OrderByDescending(x => x.Id)
+                                                .ToListAsync();
+        paginateVm.Products = orderedProducts;
+
+
+        return View(paginateVm);
+    }
+
+    public int GetPageCount(int pageSize)
+    {
+        var productCount = _context.Products.Count();
+        return (int)Math.Ceiling((decimal)productCount / pageSize);
+    }
 }

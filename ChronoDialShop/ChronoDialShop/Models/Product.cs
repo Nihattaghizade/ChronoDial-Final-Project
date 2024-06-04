@@ -10,7 +10,7 @@ namespace ChronoDialShop.Models
 		public string Name { get; set; } = null!;
         public string ItemCode { get; set; } = null!;
 		public string Description { get; set; } = null!;
-        public double? Rating { get; set; } = null!;
+        public double Rating { get; set; } 
 		public decimal SellPrice { get; set; } = default!;
 		public decimal? DiscountPrice { get; set; }
         [NotMapped]
@@ -20,8 +20,10 @@ namespace ChronoDialShop.Models
         [NotMapped]
         public IFormFile HoverFile { get; set; }
         public List<ProductImage>? ProductImages { get; set; }
-		public int VendorId { get; set; }
-		public Vendor Vendor { get; set; } = null!;
+        public int VendorId { get; set; }
+        public Vendor Vendor { get; set; } = null!;
+        //public int VendorId { get; set; } 
+        //public AppUser Vendor { get; set; } = null!;
         public int BrandId { get; set; }
         public Brand Brand { get; set; } = null!;
         public int VisualizationId { get; set; }

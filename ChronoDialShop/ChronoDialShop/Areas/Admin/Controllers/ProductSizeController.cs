@@ -30,19 +30,38 @@ public class ProductSizeController : Controller
         ViewBag.Products = await _context.Products.Where(x => !x.SoftDelete).ToListAsync();
         return View();
     }
+
     [HttpPost]
     public async Task<IActionResult> Create(ProductSizeVm productSizeVm)
     {
-        if (!ModelState.IsValid) return View(productSizeVm);
-
-        var exist = await _context.ProductSizes.Include(x => x.Size).AnyAsync(x => x.SizeId == productSizeVm.SizeId);
-        if (exist)
+        if (!ModelState.IsValid)
         {
-            ModelState.AddModelError("", "Size already exist");
+            ViewBag.Sizes = await _context.Sizes.ToListAsync();
+            ViewBag.Products = await _context.Products.Where(x => !x.SoftDelete).ToListAsync();
             return View(productSizeVm);
         }
-        _context.ProductSizes.Add((ProductSize)productSizeVm);
+
+        var exist = await _context.ProductSizes
+                                  .AnyAsync(x => x.SizeId == productSizeVm.SizeId && x.ProductId == productSizeVm.ProductId);
+
+        if (exist)
+        {
+            ModelState.AddModelError("", "This product with the selected size already exists.");
+            ViewBag.Sizes = await _context.Sizes.ToListAsync();
+            ViewBag.Products = await _context.Products.Where(x => !x.SoftDelete).ToListAsync();
+            return View(productSizeVm);
+        }
+
+        var productSize = new ProductSize
+        {
+            ProductId = productSizeVm.ProductId,
+            SizeId = productSizeVm.SizeId,
+            Count = productSizeVm.Count
+        };
+
+        _context.ProductSizes.Add(productSize);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index");
     }
 }
+

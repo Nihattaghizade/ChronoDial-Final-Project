@@ -102,3 +102,26 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+
+
+    <script>
+        function openProductModal(productId) {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("OpenModal", "Home")',
+                data: { id: productId },
+                success: function (response) {
+                    $('#modalContainer').html(response);
+                    $('#productModal').modal('show');
+                }
+            });
+        }
+
+        $(document).on('click', '.open-modal-button', function () {
+            var productId = $(this).data('product-id');
+            openProductModal(productId);
+        });
+    </script>
+}

@@ -7,25 +7,24 @@
                 <h6 class="mb-4">Create ProductSize</h6>
                 <form asp-action="Create" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Size</label>
-                        <select asp-for="SizeId" asp-items="@(new SelectList(ViewBag.Sizes,nameof(Size.Id),nameof(Size.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <option selected>Select Size</option>
+                        <label for="SizeId" class="form-label">Size</label>
+                        <select asp-for="SizeId" asp-items="@(new SelectList(ViewBag.Sizes, "Id", "Name"))" class="form-control" id="SizeId">
+                            <option selected disabled>Select Size</option>
                         </select>
                         <span asp-validation-for="SizeId" class="text-danger"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Product</label>
-                        <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.Products,nameof(Product.Id),nameof(Product.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <option selected>Select Product</option>
+                        <label for="ProductId" class="form-label">Product</label>
+                        <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.Products, "Id", "Name"))" class="form-control" id="ProductId">
+                            <option selected disabled>Select Product</option>
                         </select>
                         <span asp-validation-for="ProductId" class="text-danger"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Count</label>
-                        <input type="text" asp-for="Count" class="form-control" id="exampleInputEmail1"
-                               aria-describedby="emailHelp">
+                        <label for="Count" class="form-label">Count</label>
+                        <input type="text" asp-for="Count" class="form-control" id="Count" />
                         <span asp-validation-for="Count" class="text-danger"></span>
                     </div>
 

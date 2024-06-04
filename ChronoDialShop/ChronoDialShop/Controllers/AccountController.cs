@@ -57,6 +57,9 @@ public class AccountController : Controller
         var role = await _userManager.IsInRoleAsync(existUser, Roles.Admin.ToString());
         if (role)
             return RedirectToAction("Index", "Dashboard", new { Area = "Admin" });
+        var vendorRole = await _userManager.IsInRoleAsync(existUser, Roles.Vendor.ToString());
+        if (vendorRole)
+            return RedirectToAction("Index", "Product", new { Area = "Admin" });
         return RedirectToAction("Index", "Home");
     }
     public IActionResult Register()
@@ -95,7 +98,7 @@ public class AccountController : Controller
 
         if (registerVm.IsVendor)
         {
-            var resultVendor = await _userManager.AddToRoleAsync(newUser, Roles.Vendor.ToString());
+            var resultVendor = await _userManager.AddToRoleAsync(newUser, Roles.Admin.ToString());
             if (!resultVendor.Succeeded)
             {
                 foreach (var error in resultVendor.Errors)
@@ -123,8 +126,9 @@ public class AccountController : Controller
         _emailService.SendEmail(new EmailDto(body: link, subject: "Email Verification", to: registerVm.Email));
         TempData["VerifyEmail"] = "Confirmation mail sent!";
 
-        return RedirectToAction("Login", "Account");        
+        return RedirectToAction("Login", "Account");
     }
+
     public async Task<IActionResult> LogOut()
     {
         await _signInManager.SignOutAsync();

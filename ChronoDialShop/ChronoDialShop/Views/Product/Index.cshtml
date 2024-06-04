@@ -1,4 +1,4 @@
-﻿@model List<Product>
+﻿@model PaginateVm
 
 <section class="desktop-productsection">
          <h1>Products</h1>
@@ -63,30 +63,13 @@
                     <div></div>
                     <div class="sort-count">
                         <div class="sortallcontainer">
-                            <div class="sortcontainer"><p>Sort:</p> <i class="fa-solid fa-chevron-down"></i></div>
-                            <ul class="allsortlist hidden">
-                                <li id="1">
-                                    <label for="Filter-title-ascending-1">
-                                        <input type="radio" id="Filter-title-ascending-1"> <span>Alphabetically, A-Z</span>
-                                    </label>
-                                </li>
-                                <li id="2">
-                                    <label for="Filter-title-descending-2">
-                                        <input type="radio" id="Filter-title-descending-2"> <span>Alphabetically, Z-A</span>
-                                    </label>
-                                </li>
-                                <li id="3">
-                                    <label for="Filter-price-ascending-3">
-                                        <input type="radio" id="Filter-price-ascending-3"> <span>Price, low to high</span>
-                                    </label>
-                                </li>
-                                <li id="4">
-                                    <label for="Filter-price-descending-4">
-                                        <input type="radio" id="Filter-price-descending-4"> <span>Price, high to low</span>
-                                    </label>
-                                </li>
-                                
-                            </ul>
+                             <select class="form-control" id="sort">
+                                 <option value="">Seçin</option>
+                                 <option value="1" class="sortitem">Alphabetically, A-Z</option>
+                                 <option value="2" class="sortitem">Alphabetically, Z-A</option>
+                                 <option value="3" class="sortitem">Price, higt to low</option>
+                                 <option value="4" class="sortitem">Price, low to high</option>
+                             </select>
                         </div>
                         <p> <span>18</span> Products </p>
                     </div>
@@ -95,9 +78,9 @@
                     
                   @* @await Component.InvokeAsync("ProductMain");*@
 
-                   @await Html.PartialAsync("_ProductPartial", Model)
+                   @await Html.PartialAsync("_ProductPartial", Model.Products)
                 </div>
-                @*<div class="paginationcontainer">
+                <div class="paginationcontainer">
                     <ul>
                         @if (Model.CurrentPage != 1)
                         {
@@ -125,7 +108,7 @@
                         }
                 
                     </ul>
-                </div>*@
+                </div>
             </div>
         </div>
 </section>
@@ -171,8 +154,9 @@
                 innerColorsIds.push(parseInt($(this).val()));
             });
 
-            var minPrice = parseInt($("#slider-min-price").val());
-            var maxPrice = parseInt($("#slider-max-price").val());
+
+            //var minPrice = parseInt($("#slider-min-price").val());
+            //var maxPrice = parseInt($("#slider-max-price").val());
 
             return {
                 BrandsIds: brandsIds,
@@ -180,23 +164,49 @@
                 BandTypesIds: bandTypesIds,
                 VisualizationsIds: visualizationsIds,
                 InnerColorsIds: innerColorsIds,
-                MinPrice: isNaN(minPrice) ? 0 : minPrice,
-                MaxPrice: isNaN(maxPrice) ? 20000 : maxPrice,
+                //MinPrice: isNaN(minPrice) ? 0 : minPrice,
+                //MaxPrice: isNaN(maxPrice) ? 20000 : maxPrice,
             };
         }
 
 
 
-        const sendRequest = async (sortId) => {
-            const abc = getFilterDto();
+        const sendSortRequest = async (id) => {
+            const dto = getFilterDto();
 
             try {
-                const response = await fetch(`/Product/SortProducts/${sortId}`, {
+                const response = await fetch(`/Product/SortProducts/${id}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: abc
+                    body: dto
+                });
+
+                if (response.ok) {
+                    const data = await response.text();
+                    //console.log(data);
+                    document.querySelector(".productscontainer").innerHTML = data;
+                } else {
+                    console.error('Failed to fetch sorted products');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+
+
+        const sendFilterRequest = async (id) => {
+            const dto = getFilterDto();
+            console.log(dto);
+            try {
+                const response = await fetch(`/Product/FilterViewProducts/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: dto
                 });
 
                 if (response.ok) {
@@ -214,20 +224,38 @@
         // Add event listeners to all checkboxes
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('click', async () => {
-                await sendRequest(checkbox.value);
+                await sendFilterRequest(checkbox.value);
             });
         });
 
         // Add event listeners to all radio buttons
-        document.querySelectorAll('.allsortlist input[type="radio"]').forEach(radio => {
-            radio.addEventListener('click', async (e) => {
-                const sortId = e.target.closest('li').id;
-                await sendRequest(sortId);
-            });
+        //document.querySelectorAll('.allsortlist input[type="radio"]').forEach(radio => {
+        //    radio.addEventListener('click', async (e) => {
+        //        const sortId = e.target.closest('li').id;
+        //        await sendRequest(sortId);
+        //    });
+        //});
+
+        document.querySelector('#sort').addEventListener('change', (e) => {
+            const sortId = getCurrentOptionId();
+            console.log(sortId);
+            sendSortRequest(sortId);
         });
 
-
+        function getCurrentOptionId() {
+            var selectElement = document.getElementById("sort");
+            var selectedIndex = selectElement.selectedIndex;
+            var selectedOption = selectElement.options[selectedIndex];
+            var selectedOptionId = selectedOption.value;
+            return selectedOptionId;
+        }
 
     </script>
+
+
+
+
+
+     
 }
 

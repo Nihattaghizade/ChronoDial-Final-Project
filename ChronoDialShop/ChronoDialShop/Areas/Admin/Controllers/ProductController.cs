@@ -3,21 +3,25 @@ using ChronoDialShop.Enums;
 using ChronoDialShop.Extentions;
 using ChronoDialShop.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin,Vendor")]
+
 public class ProductController : Controller
 {
     private readonly AppDbContext _context;
     private readonly IWebHostEnvironment _env;
+    private readonly UserManager<AppUser> _userManager;
 
-    public ProductController(AppDbContext context, IWebHostEnvironment env)
+    public ProductController(AppDbContext context, IWebHostEnvironment env, UserManager<AppUser> userManager)
     {
         _context = context;
         _env = env;
+        _userManager = userManager;
     }
     public async Task<IActionResult> Index()
     {
@@ -42,26 +46,13 @@ public class ProductController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(Product product)
     {
-        //if(!ModelState.IsValid) return View(book);
-
-        //book.BookImages = new List<BookImage>();
-        //foreach (var file in book.Files)
-        //{
-        //    var uniqueFileName = await file.SaveFileAsync(_env.WebRootPath,"client","image/products");
-        //    book.BookImages.Add(new BookImage
-        //    {
-        //        Url = uniqueFileName
-        //    });
-        //}
-
-        //await _context.AddAsync(book);
-        //return RedirectToAction("Index");
 
         if (_context.Products.Any(p => p.Name == product.Name))
         {
             ModelState.AddModelError("", "Book already exists");
             return View(product);
         }
+
         product.ProductImages = new List<ProductImage>();
         if (product.Files != null)
         {
@@ -263,17 +254,7 @@ public class ProductController : Controller
 
         return RedirectToAction("Index");
     }
-    //public async Task<IActionResult> DeleteImage(int id)
-    //{
-    //    var existsImage = await _context.BookImages.FindAsync(id);
-    //    var product = await _context.Books.Include(x => x.Category)
-    //                                          .Include(x => x.BookImages)
-    //                                          .FirstOrDefaultAsync(x => x.Id == existsImage.BookId);
-    //    existsImage.File.DeleteFile(_env.WebRootPath, "client", "image/products", existsImage.Url);
-    //    _context.Remove(existsImage);
-    //    await _context.SaveChangesAsync();
-    //    return PartialView("_ProductImagePartial", product.BookImages);
-    //}
+    
     public async Task<IActionResult> Delete(int id)
     {
         Product? product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
@@ -289,3 +270,137 @@ public class ProductController : Controller
     }
 
 }
+
+
+//public async Task<IActionResult> Create()
+//{
+//    var user = await _userManager.GetUserAsync(User);
+//    var roles = await _userManager.GetRolesAsync(user);
+//    ViewBag.UserRole = roles;
+
+//    ViewBag.Brands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
+//    ViewBag.Sizes = await _context.Sizes.Where(x => !x.SoftDelete).ToListAsync();
+//    ViewBag.Vendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
+//    ViewBag.Visualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
+//    ViewBag.BandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+//    ViewBag.InnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
+
+//    return View();
+//}
+
+
+//[HttpPost]
+//public async Task<IActionResult> Create(Product product)
+//{
+//    if (_context.Products.Any(p => p.Name == product.Name))
+//    {
+//        ModelState.AddModelError("", "Product already exists");
+//        return View(product);
+//    }
+
+//    var user = await _userManager.GetUserAsync(User);
+//    var userRoles = await _userManager.GetRolesAsync(user);
+
+//    if (userRoles.Contains(Roles.Vendor.ToString()))
+//    {
+//        // Assuming the Vendor ID is the same as the user's ID or some property linked to the user
+//        var vendor = await _context.Vendors.FirstOrDefaultAsync(v => v.AppUserId == user.Id);
+//        if (vendor != null)
+//        {
+//            product.VendorId = vendor.Id;
+//        }
+//        else
+//        {
+//            ModelState.AddModelError("", "Vendor information not found.");
+//            return View(product);
+//        }
+//    }
+
+//    // Process product images
+//    product.ProductImages = new List<ProductImage>();
+
+//    if (product.Files != null)
+//    {
+//        foreach (var file in product.Files)
+//        {
+//            if (!file.CheckFileSize(2))
+//            {
+//                ModelState.AddModelError("Files", "Files cannot be more than 2mb");
+//                return View(product);
+//            }
+
+//            if (!file.CheckFileType("image"))
+//            {
+//                ModelState.AddModelError("Files", "Files must be image type!");
+//                return View(product);
+//            }
+
+//            var filename = await file.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+//            var additionalProductImages = CreateProduct(filename, false, false, product);
+
+//            product.ProductImages.Add(additionalProductImages);
+//        }
+//    }
+
+//    if (!product.MainFile.CheckFileSize(2))
+//    {
+//        ModelState.AddModelError("MainFile", "Files cannot be more than 2mb");
+//        return View(product);
+//    }
+
+//    if (!product.MainFile.CheckFileType("image"))
+//    {
+//        ModelState.AddModelError("MainFile", "Files must be image type!");
+//        return View(product);
+//    }
+
+//    var mainFileName = await product.MainFile.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+//    var mainProductImageCreate = CreateProduct(mainFileName, false, true, product);
+//    product.ProductImages.Add(mainProductImageCreate);
+
+//    if (!product.HoverFile.CheckFileSize(2))
+//    {
+//        ModelState.AddModelError("HoverFile", "Files cannot be more than 2mb");
+//        return View(product);
+//    }
+
+//    if (!product.HoverFile.CheckFileType("image"))
+//    {
+//        ModelState.AddModelError("HoverFile", "Files must be image type!");
+//        return View(product);
+//    }
+
+//    var hoverFileName = await product.HoverFile.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+//    var hoverProductImageCreate = CreateProduct(hoverFileName, true, false, product);
+//    product.ProductImages.Add(hoverProductImageCreate);
+
+//    await _context.Products.AddAsync(product);
+//    await _context.SaveChangesAsync();
+
+//    return RedirectToAction("Index");
+//}
+//public async Task<IActionResult> DeleteImage(int id)
+//{
+//    var existsImage = await _context.BookImages.FindAsync(id);
+//    var product = await _context.Books.Include(x => x.Category)
+//                                          .Include(x => x.BookImages)
+//                                          .FirstOrDefaultAsync(x => x.Id == existsImage.BookId);
+//    existsImage.File.DeleteFile(_env.WebRootPath, "client", "image/products", existsImage.Url);
+//    _context.Remove(existsImage);
+//    await _context.SaveChangesAsync();
+//    return PartialView("_ProductImagePartial", product.BookImages);
+//}
+
+
+
+//public async Task<IActionResult> DeleteImage(int id)
+//{
+//    var existsImage = await _context.BookImages.FindAsync(id);
+//    var product = await _context.Books.Include(x => x.Category)
+//                                          .Include(x => x.BookImages)
+//                                          .FirstOrDefaultAsync(x => x.Id == existsImage.BookId);
+//    existsImage.File.DeleteFile(_env.WebRootPath, "client", "image/products", existsImage.Url);
+//    _context.Remove(existsImage);
+//    await _context.SaveChangesAsync();
+//    return PartialView("_ProductImagePartial", product.BookImages);
+//}

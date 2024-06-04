@@ -1,11 +1,11 @@
 ﻿@model List<Brand>
 
-@foreach(var brand in Model)
+@foreach (var item in Model)
 {
-    <li data-id="@brand.Id" class="brand-item">
-        <label for="brand-@brand.Id">
-            <input type="checkbox" name="BrandsIds" id="brand-@brand.Id" value="@brand.Id">
-            <span>@brand.Name</span>
+    <li class="brand-item">
+        <label for="brand@(item.Id)">
+            <input type="checkbox" name="BandTypesIds" id="brand@(item.Id)" value="@item.Id">
+            <span>@item.Name</span>
         </label>
     </li>
 }

@@ -3,6 +3,23 @@
     decimal totalPrice = Model.Sum(x => x.Count * x.Price);
 }
 
+@*<form id="updateQuantityForm" method="post">
+    <input type="hidden" name="ProductId" id="ProductId" value="">
+    <input type="hidden" name="QuantityChange" id="QuantityChange" value="">
+</form>
+
+<script>
+    function updateQuantity(productId, change) {
+        var form = document.getElementById('updateQuantityForm');
+        var productIdInput = document.getElementById('ProductId');
+        var quantityChangeInput = document.getElementById('QuantityChange');
+
+        productIdInput.value = productId;
+        quantityChangeInput.value = change;
+
+        form.submit();
+    }
+</script>*@
 
 <div class="basketmaincontainer">
     @foreach (var product in Model)
@@ -12,7 +29,7 @@
                 <img src="~/client/image/product/@product.Image" alt="">
             </div>
             <div class="infobox">
-                <h3 class="productname"><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
+                <h3 class="productname" style="width:250px;"><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
                 <div class="info">
                     <p>Color: <span>Gold</span></p>
                     <p>Size: <span>36mm</span></p>
@@ -21,11 +38,12 @@
                 <p class="productprice">$@product.Price</p>
                 <div class="inputcontainer">
                     <div class="countcontainer">
-                        <button class="decreasebtn"><i class="fa-solid fa-minus"></i></button>
+                        @*<button class="decreasebtn"><i class="fa-solid fa-minus"></i></button>
                         <input type="number" name="" id="" value="0">
-                        <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>
+                        <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>*@
+                        <span style="font-size:1rem; font-weight:500;">Count: @product.Count</span>
                     </div>
-                    <button class="trash"><i class="fa-solid fa-trash"></i></button>
+                    <button class="trash" onclick="removeFromCart('@product.Id')"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
         </div>
@@ -34,10 +52,10 @@
 <div class="basketcontainerbelow">
     <div class="subtotalcon">
         <p>Subtotal:</p>
-        <span>$@totalPrice</span>
+        <span id="subtotal">$@totalPrice</span>
     </div>
     <div class="buttoncon">
         <button><div>View Cart</div></button>
-        <button><div>Check Out</div></button>
+        @*<button><div>Check Out</div></button>*@
     </div>
 </div>

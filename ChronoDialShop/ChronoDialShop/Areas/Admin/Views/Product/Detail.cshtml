@@ -75,7 +75,26 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        Sit consetetur eirmod lorem ea magna sadipscing ipsum elitr invidunt, dolores lorem erat ipsum ut aliquyam eos lorem sed. Nonumy aliquyam ea justo eos dolores dolores duo dolores. Aliquyam dolor sea dolores sit takimata no erat vero. At lorem justo tempor lorem duo, stet kasd aliquyam ipsum voluptua labore at.
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col">Brand Name</th>
+                                    <th scope="col">Inner Color</th>
+                                    <th scope="col">Visalization</th>
+                                    <th scope="col">Band Type</th>
+                                    <th scope="col">Vendor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.Brand.Name</td>
+                                    <td>@Model.InnerColor.Name</td>
+                                    <td>@Model.Visualization.Name</td>
+                                    <td>@Model.BandType.Name</td>
+                                    <td>@Model.Vendor.Name</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

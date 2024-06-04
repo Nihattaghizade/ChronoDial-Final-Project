@@ -46,7 +46,7 @@
             <div class="mobileheader-upside">
                 <button class="menubutton"> <i class="fa-solid fa-bars fa-2xl" style="color: #ffff;"></i> </button>
                 <div class="mobileheader-logobox">
-                    <a href=""><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
+                    <a asp-action="Index" asp-controller="Home"><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
             <div class="tabletheader-left">
                 <button class="menubutton"> <i class="fa-solid fa-bars fa-2xl" style="color: #ffff;"></i> </button>
                 <div class="mobileheader-logobox">
-                    <a href=""><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
+                    <a asp-action="Index" asp-controller="Home"><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
                 </div>
             </div>
 
@@ -82,19 +82,19 @@
 
     <header class="desktop-header">
         <div class="container desktopheadercontainer">
-            <a class="desktoplogo" href=""><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
+            <a class="desktoplogo" asp-action="Index" asp-controller="Home"><img src="~/client/image/logo/chronodiallogo.webp" alt=""></a>
             <ul class="main-menu">
-                <li class="main-page"><a class="mainpage-link" href="">Home</a></li>
-                <li class="main-page"><a href="./shoppage.html">Shop</a></li>
-                <li class="main-page"><a href="">Blog</a></li>
+                <li class="main-page"><a class="mainpage-link" asp-action="Index" asp-controller="Home">Home</a></li>
+                <li class="main-page"><a asp-action="Index" asp-controller="Product">Shop</a></li>
+                @*<li class="main-page"><a href="">Blog</a></li>*@
                 <li class="mainpage-sub">
                     <a class="mainpagesub-item" href="">Pages</a> <i class="mainpagesub-item fa-solid fa-chevron-down fa-2xs"></i>
                     <ul class="sub-menu">
-                        <li class="altpages"><a href="">About</a></li>
+                        @*<li class="altpages"><a href="">About</a></li>
                         <li class="altpages"><a href="">Faq</a></li>
-                        <li class="altpages"><a href="">Contact</a></li>
-                        <li class="altpages"><a href="">Login</a></li>
-                        <li class="altpages"><a href="">Register</a></li>
+                        <li class="altpages"><a href="">Contact</a></li>*@
+                        <li class="altpages"><a asp-action="Login" asp-controller="Account">Login</a></li>
+                        <li class="altpages"><a asp-action="Register" asp-controller="Account">Register</a></li>
                         <li class="altpages"><a href="">Cart</a></li>
                         <li class="altpages"><a href="">Wishlist</a></li>
                         <!-- <li  class="altpages"><a href="">Cehckout</a></li> -->
@@ -124,18 +124,18 @@
             <button class="menuCloseButton"> <i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i> </button>
             <nav>
                 <ul class="menulist">
-                    <li class="menubox"><a href="">Home</a></li>
-                    <li class="menubox"><a href="">Shop</a></li>
-                    <li class="menubox"><a href="">Blog</a></li>
+                    <li class="menubox"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li class="menubox"><a asp-action="Index" asp-controller="Product">Shop</a></li>
+                    @*<li class="menubox"><a href="">Blog</a></li>*@
                     <li class="menubox pagebox"> <p class="pageword">Page</p> <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i> </li>
                 </ul>
                 <ul class="pagelist hidden">
                     <li class="pagebox"> <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> <p class="pageword">Page</p> </li>
-                    <li class="pagelistbox"><a href="">About</a></li>
+                    @*<li class="pagelistbox"><a href="">About</a></li>
                     <li class="pagelistbox"><a href="">Faq</a></li>
-                    <li class="pagelistbox"><a href="">Contact Us</a></li>
-                    <li class="pagelistbox"><a href="">Login</a></li>
-                    <li class="pagelistbox"><a href="">Register</a></li>
+                    <li class="pagelistbox"><a href="">Contact Us</a></li>*@
+                    <li class="pagelistbox"><a asp-action="Login" asp-controller="Account">Login</a></li>
+                    <li class="pagelistbox"><a asp-action="Register" asp-controller="Account">Register</a></li>
                     <li class="pagelistbox"><a href="">Wishlist</a></li>
                     <li class="pagelistbox"><a href="">Cart</a></li>
                 </ul>
