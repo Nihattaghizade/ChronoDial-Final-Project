@@ -32,35 +32,138 @@ public class ProductController : Controller
                                                 .ToListAsync();
         return View(products);
     }
+    //public async Task<IActionResult> Create()
+    //{
+    //    ViewBag.Brands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
+    //    ViewBag.Sizes = await _context.Sizes.Where(x => !x.SoftDelete).ToListAsync();
+    //    ViewBag.Vendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
+    //    ViewBag.Visualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
+    //    ViewBag.BandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+    //    ViewBag.InnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
+
+    //    return View();
+    //}
+    //[HttpPost]
+    //public async Task<IActionResult> Create(Product product)
+    //{
+
+    //    if (_context.Products.Any(p => p.Name == product.Name))
+    //    {
+    //        ModelState.AddModelError("", "Book already exists");
+    //        return View(product);
+    //    }
+
+    //    product.ProductImages = new List<ProductImage>();
+    //    if (product.Files != null)
+    //    {
+    //        foreach (var file in product.Files)
+    //        {
+    //            if (!file.CheckFileSize(2))
+    //            {
+    //                ModelState.AddModelError("Files", "Files cannot be more than 2mb");
+    //                return View(product);
+    //            }
+
+    //            if (!file.CheckFileType("image"))
+    //            {
+    //                ModelState.AddModelError("Files", "Files must be image type!");
+    //                return View(product);
+    //            }
+
+    //            var filename = await file.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+    //            var additionalProductImages = CreateProduct(filename, false, false, product);
+
+    //            product.ProductImages.Add(additionalProductImages);
+    //        }
+    //    }
+    //    if (!product.MainFile.CheckFileSize(2))
+    //    {
+    //        ModelState.AddModelError("MainFile", "Files cannot be more than 2mb");
+    //        return View(product);
+    //    }
+
+
+    //    if (!product.MainFile.CheckFileType("image"))
+    //    {
+    //        ModelState.AddModelError("MainFile", "Files must be image type!");
+    //        return View(product);
+    //    }
+
+    //    var mainFileName = await product.MainFile.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+    //    var mainProductImageCreate = CreateProduct(mainFileName, false, true, product);
+
+    //    product.ProductImages.Add(mainProductImageCreate);
+
+    //    if (!product.HoverFile.CheckFileSize(2))
+    //    {
+    //        ModelState.AddModelError("HoverFile", "Files cannot be more than 2mb");
+    //        return View(product);
+    //    }
+
+
+    //    if (!product.HoverFile.CheckFileType("image"))
+    //    {
+    //        ModelState.AddModelError("HoverFile", "Files must be image type!");
+    //        return View(product);
+    //    }
+
+    //    var hoverFileName = await product.HoverFile.SaveFileAsync(_env.WebRootPath, "client", "image/product");
+    //    var hoverProductImageCreate = CreateProduct(hoverFileName, true, false, product);
+    //    product.ProductImages.Add(hoverProductImageCreate);
+
+    //    await _context.Products.AddAsync(product);
+
+    //    await _context.SaveChangesAsync();
+
+    //    return RedirectToAction("Index");
+    //}
+
     public async Task<IActionResult> Create()
     {
+        var user = await _userManager.GetUserAsync(User);
+
+        if (User.IsInRole(Roles.Vendor.ToString()))
+        {
+            // If the user is a vendor, hide the vendor dropdown
+            ViewBag.IsVendor = true;
+        }
+        else
+        {
+            // If the user is an admin, show the vendor dropdown
+            ViewBag.Vendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
+            ViewBag.IsVendor = false;
+        }
+
         ViewBag.Brands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.Sizes = await _context.Sizes.Where(x => !x.SoftDelete).ToListAsync();
-        ViewBag.Vendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.Visualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.BandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
         ViewBag.InnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
 
         return View();
     }
+
     [HttpPost]
+    //[Authorize(Roles = "Admin,Vendor")]
     public async Task<IActionResult> Create(Product product)
     {
-
         if (_context.Products.Any(p => p.Name == product.Name))
         {
-            ModelState.AddModelError("", "Book already exists");
+            ModelState.AddModelError("", "Product already exists");
             return View(product);
         }
 
         product.ProductImages = new List<ProductImage>();
+        var currentUser = await _userManager.GetUserAsync(User);
+        bool isVendor = User.IsInRole("Vendor");
+
         if (product.Files != null)
         {
             foreach (var file in product.Files)
             {
                 if (!file.CheckFileSize(2))
                 {
-                    ModelState.AddModelError("Files", "Files cannot be more than 2mb");
+                    ModelState.AddModelError("Files", "Files cannot be more than 2MB");
                     return View(product);
                 }
 
@@ -72,16 +175,15 @@ public class ProductController : Controller
 
                 var filename = await file.SaveFileAsync(_env.WebRootPath, "client", "image/product");
                 var additionalProductImages = CreateProduct(filename, false, false, product);
-
                 product.ProductImages.Add(additionalProductImages);
             }
         }
+
         if (!product.MainFile.CheckFileSize(2))
         {
-            ModelState.AddModelError("MainFile", "Files cannot be more than 2mb");
+            ModelState.AddModelError("MainFile", "Files cannot be more than 2MB");
             return View(product);
         }
-
 
         if (!product.MainFile.CheckFileType("image"))
         {
@@ -91,15 +193,13 @@ public class ProductController : Controller
 
         var mainFileName = await product.MainFile.SaveFileAsync(_env.WebRootPath, "client", "image/product");
         var mainProductImageCreate = CreateProduct(mainFileName, false, true, product);
-
         product.ProductImages.Add(mainProductImageCreate);
 
         if (!product.HoverFile.CheckFileSize(2))
         {
-            ModelState.AddModelError("HoverFile", "Files cannot be more than 2mb");
+            ModelState.AddModelError("HoverFile", "Files cannot be more than 2MB");
             return View(product);
         }
-
 
         if (!product.HoverFile.CheckFileType("image"))
         {
@@ -111,12 +211,25 @@ public class ProductController : Controller
         var hoverProductImageCreate = CreateProduct(hoverFileName, true, false, product);
         product.ProductImages.Add(hoverProductImageCreate);
 
-        await _context.Products.AddAsync(product);
+        if (isVendor)
+        {
+            var vendor = await _context.Vendors.FirstOrDefaultAsync(v => v.UserId == currentUser.Id);
+            if (vendor == null)
+            {
+                ModelState.AddModelError("", "Vendor not found");
+                return View(product);
+            }
+            product.VendorId = vendor.Id;
+        }
 
+        await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
 
         return RedirectToAction("Index");
     }
+
+
+
     public ProductImage CreateProduct(string url, bool isHover, bool isMain, Product product)
     {
         return new ProductImage

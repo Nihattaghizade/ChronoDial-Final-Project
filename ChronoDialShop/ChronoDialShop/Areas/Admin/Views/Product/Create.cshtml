@@ -78,12 +78,23 @@
                         <span asp-validation-for="BrandId" class="text-danger"></span>
                     </div>
 
-                    <div class="mb-3">
+                    @*<div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Vendor</label>
                         <select asp-for="VendorId" asp-items="@(new SelectList(ViewBag.Vendors,nameof(Vendor.Id),nameof(Vendor.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <option selected>Select Vendor</option>
                         </select>
                         <span asp-validation-for="VendorId" class="text-danger"></span>
+                    </div>*@
+
+                    <div class="mb-3">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <label for="exampleInputEmail1" class="form-label">Vendor</label>
+                            <select asp-for="VendorId" asp-items="@(new SelectList(ViewBag.Vendors,nameof(Vendor.Id),nameof(Vendor.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <option selected>Select Vendor</option>
+                            </select>
+                            <span asp-validation-for="VendorId" class="text-danger"></span>
+                        }
                     </div>
 
                     <div class="mb-3">

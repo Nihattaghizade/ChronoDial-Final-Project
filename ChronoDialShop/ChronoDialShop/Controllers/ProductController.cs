@@ -312,6 +312,10 @@ namespace ChronoDialShop.Controllers
 			return PartialView("_ProductPartial", query);
 
 		}
+
+
+		
+
 	}
 }
 

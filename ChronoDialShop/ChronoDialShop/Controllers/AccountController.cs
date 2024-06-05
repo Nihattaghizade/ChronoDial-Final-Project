@@ -66,6 +66,7 @@ public class AccountController : Controller
     {
         return View();
     }
+
     [HttpPost]
     public async Task<IActionResult> Register(RegisterVm registerVm)
     {
@@ -98,7 +99,7 @@ public class AccountController : Controller
 
         if (registerVm.IsVendor)
         {
-            var resultVendor = await _userManager.AddToRoleAsync(newUser, Roles.Admin.ToString());
+            var resultVendor = await _userManager.AddToRoleAsync(newUser, Roles.Vendor.ToString());
             if (!resultVendor.Succeeded)
             {
                 foreach (var error in resultVendor.Errors)
@@ -107,6 +108,14 @@ public class AccountController : Controller
                 }
                 return View(registerVm);
             }
+
+            Vendor newVendor = new Vendor
+            {
+                Name = $"{registerVm.Name} {registerVm.Surname}",
+                User = newUser
+            };
+            _context.Vendors.Add(newVendor);
+            await _context.SaveChangesAsync();
         }
         else
         {
@@ -128,6 +137,68 @@ public class AccountController : Controller
 
         return RedirectToAction("Login", "Account");
     }
+
+    //[HttpPost]
+    //public async Task<IActionResult> Register(RegisterVm registerVm)
+    //{
+    //    if (!ModelState.IsValid) return View(registerVm);
+
+    //    var existUser = await _userManager.FindByNameAsync(registerVm.Username);
+    //    if (existUser != null)
+    //    {
+    //        ModelState.AddModelError("", "User already exists");
+    //        return View(registerVm);
+    //    }
+
+    //    AppUser newUser = new AppUser
+    //    {
+    //        Name = registerVm.Name,
+    //        Surname = registerVm.Surname,
+    //        Email = registerVm.Email,
+    //        UserName = registerVm.Username,
+    //    };
+
+    //    var result = await _userManager.CreateAsync(newUser, registerVm.Password);
+    //    if (!result.Succeeded)
+    //    {
+    //        foreach (var error in result.Errors)
+    //        {
+    //            ModelState.AddModelError("", $"{error.Code} - {error.Description}");
+    //        }
+    //        return View(registerVm);
+    //    }
+
+    //    var roleName = registerVm.IsVendor ? Roles.Vendor.ToString() : Roles.Customer.ToString();
+    //    var roleResult = await _userManager.AddToRoleAsync(newUser, roleName);
+    //    if (!roleResult.Succeeded)
+    //    {
+    //        foreach (var error in roleResult.Errors)
+    //        {
+    //            ModelState.AddModelError("", $"{error.Code} - {error.Description}");
+    //        }
+    //        return View(registerVm);
+    //    }
+
+    //    if (registerVm.IsVendor)
+    //    {
+    //        Vendor newVendor = new Vendor
+    //        {
+    //            Name = $"{registerVm.Name} {registerVm.Surname}",
+    //            User = newUser
+    //        };
+    //        _context.Vendors.Add(newVendor);
+    //        await _context.SaveChangesAsync();
+    //    }
+
+    //    var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+    //    var link = Url.Action("VerifyEmail", "Account", new { email = newUser.Email, token = token }, protocol: HttpContext.Request.Scheme);
+    //    _emailService.SendEmail(new EmailDto(body: link, subject: "Email Verification", to: registerVm.Email));
+    //    TempData["VerifyEmail"] = "Confirmation mail sent!";
+
+    //    return RedirectToAction("Login", "Account");
+    //}
+
+
 
     public async Task<IActionResult> LogOut()
     {
@@ -152,18 +223,18 @@ public class AccountController : Controller
     }
 
     #region(CreateRoles
-    //public async Task<IActionResult> CreateRole()
-    //{
-    //    foreach (var role in Enum.GetValues(typeof(Roles)))
-    //    {
-    //        await _roleManager.CreateAsync(new IdentityRole
-    //        {
-    //            Id = Guid.NewGuid().ToString(),
-    //            Name = role.ToString(),
-    //        });
-    //    }
-    //    return RedirectToAction("Index", "Home");
-    //}
+    public async Task<IActionResult> CreateRole()
+    {
+        foreach (var role in Enum.GetValues(typeof(Roles)))
+        {
+            await _roleManager.CreateAsync(new IdentityRole
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = role.ToString(),
+            });
+        }
+        return RedirectToAction("Index", "Home");
+    }
     #endregion
 
     #region(AdminCreate

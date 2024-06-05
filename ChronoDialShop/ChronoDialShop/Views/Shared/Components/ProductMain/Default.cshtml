@@ -1,4 +1,9 @@
 ﻿@model PaginateVm
+@{
+    double rating = Model.Product.Rating;
+    int fullStars = (int)rating;
+    bool halfStar = rating - fullStars >= 0.5;
+}
 
 @foreach (var product in Model.Products)
 {
@@ -11,11 +16,20 @@
             <h3><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
             <div class="productfeatures">
                 <div class="ratingcon">
-                    <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                    <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                    <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                    <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
-                    <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
+                    }
+
+                    @if (halfStar)
+                    {
+                        <i class="fa-solid fa-star-half-stroke" style="color: #cbba9c;"></i>
+                    }
+
+                    @for (int i = fullStars + (halfStar ? 1 : 0); i < 5; i++)
+                    {
+                        <i class="fa-regular fa-star" style="color: #cbba9c;"></i>
+                    }
                 </div>
                 <div class="pricebox">
                     @if (product.DiscountPrice > 0)

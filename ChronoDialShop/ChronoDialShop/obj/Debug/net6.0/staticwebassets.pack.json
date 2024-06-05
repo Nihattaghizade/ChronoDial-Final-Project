@@ -581,20 +581,20 @@
       "PackagePath": "staticwebassets\\client\\image\\background\\homebackgroundimage1.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\198effb8-f3e5-40f5-93a0-1b2fe55f0859_alligator.jpg",
-      "PackagePath": "staticwebassets\\client\\image\\bandtype\\198effb8-f3e5-40f5-93a0-1b2fe55f0859_alligator.jpg"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\9688ae57-31f8-418d-bd68-201a48b79e09_silicone.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\9688ae57-31f8-418d-bd68-201a48b79e09_silicone.jpg"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\c74e9698-c976-4268-b7d0-2e008278aa32_silicone.jpg",
-      "PackagePath": "staticwebassets\\client\\image\\bandtype\\c74e9698-c976-4268-b7d0-2e008278aa32_silicone.jpg"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\a3d09e3e-a3ba-40ef-a618-e171b440e45a_alligator.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\a3d09e3e-a3ba-40ef-a618-e171b440e45a_alligator.jpg"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\f7e4f421-5bfe-462b-8933-5aaca2ccbf1c_stainlesssteel.jpg",
-      "PackagePath": "staticwebassets\\client\\image\\bandtype\\f7e4f421-5bfe-462b-8933-5aaca2ccbf1c_stainlesssteel.jpg"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\ab510298-db4b-40ab-909b-f7b6604fe5ca_leather.webp",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\ab510298-db4b-40ab-909b-f7b6604fe5ca_leather.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\fca1f89a-6f29-4d33-8dc4-b62e174b4fd3_leather.webp",
-      "PackagePath": "staticwebassets\\client\\image\\bandtype\\fca1f89a-6f29-4d33-8dc4-b62e174b4fd3_leather.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\bandtype\\d8addf28-b236-48e2-9b3f-d35936ea8740_stainlesssteel.jpg",
+      "PackagePath": "staticwebassets\\client\\image\\bandtype\\d8addf28-b236-48e2-9b3f-d35936ea8740_stainlesssteel.jpg"
     },
     {
       "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\breadcrumbbackgroundimg\\breadcrumbimg.webp",
@@ -613,24 +613,44 @@
       "PackagePath": "staticwebassets\\client\\image\\logo\\chronodiallogo.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\1e43b9c2-48af-49a8-8f77-f13fa05d62d5_numberdial1.webp",
-      "PackagePath": "staticwebassets\\client\\image\\numberdial\\1e43b9c2-48af-49a8-8f77-f13fa05d62d5_numberdial1.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\25b86c13-b1d1-4968-9383-457bb073c69e_numberdial2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\25b86c13-b1d1-4968-9383-457bb073c69e_numberdial2.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\4233b747-1161-48d5-b9dc-84dd6383affd_numberdial5.webp",
-      "PackagePath": "staticwebassets\\client\\image\\numberdial\\4233b747-1161-48d5-b9dc-84dd6383affd_numberdial5.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\7f720745-8b82-4795-8324-f93dde866826_numberdial1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\7f720745-8b82-4795-8324-f93dde866826_numberdial1.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\73b09489-f504-49e7-a816-7571dc306965_numberdial4.webp",
-      "PackagePath": "staticwebassets\\client\\image\\numberdial\\73b09489-f504-49e7-a816-7571dc306965_numberdial4.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\9708d917-e0cf-47f0-98de-10074d81c513_numberdial4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\9708d917-e0cf-47f0-98de-10074d81c513_numberdial4.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\aba459ff-acef-4314-951b-08d182fdf61d_numberdial2.webp",
-      "PackagePath": "staticwebassets\\client\\image\\numberdial\\aba459ff-acef-4314-951b-08d182fdf61d_numberdial2.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\9fa42f7b-8fec-47d7-9efe-2679853e5301_numberdial3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\9fa42f7b-8fec-47d7-9efe-2679853e5301_numberdial3.webp"
     },
     {
-      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\e46ea8f3-60c5-43e0-b3fe-1af409cf7139_numberdial3.webp",
-      "PackagePath": "staticwebassets\\client\\image\\numberdial\\e46ea8f3-60c5-43e0-b3fe-1af409cf7139_numberdial3.webp"
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\numberdial\\e963d3aa-2636-420e-ad67-d6d537ee68ad_numberdial5.webp",
+      "PackagePath": "staticwebassets\\client\\image\\numberdial\\e963d3aa-2636-420e-ad67-d6d537ee68ad_numberdial5.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\45d10278-b850-44e5-95ab-a27ebe2bf0fd_pp-cvaa-001-5.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\45d10278-b850-44e5-95ab-a27ebe2bf0fd_pp-cvaa-001-5.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\9015ad30-4968-45dd-8ce7-5bd30b636792_pp-cvaa-001-2.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\9015ad30-4968-45dd-8ce7-5bd30b636792_pp-cvaa-001-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\90b92a8c-0ae8-43be-a6ac-446d46442fd0_pp-cvaa-001-4.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\90b92a8c-0ae8-43be-a6ac-446d46442fd0_pp-cvaa-001-4.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\e4aad03a-cff5-454c-9bb4-64f7fc09cafe_pp-cvaa-001-1.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\e4aad03a-cff5-454c-9bb4-64f7fc09cafe_pp-cvaa-001-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\image\\product\\e700a9b0-78dc-4389-a034-e8a1807d4f68_pp-cvaa-001-3.webp",
+      "PackagePath": "staticwebassets\\client\\image\\product\\e700a9b0-78dc-4389-a034-e8a1807d4f68_pp-cvaa-001-3.webp"
     },
     {
       "Id": "C:\\Users\\99450\\OneDrive\\Masaüstü\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\wwwroot\\client\\js\\homepage.js",
