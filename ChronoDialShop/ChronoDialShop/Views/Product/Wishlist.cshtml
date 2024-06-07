@@ -1,0 +1,31 @@
+﻿<section class="breadcrumbsection">
+    <div class="breadcrumbcontainer">
+        <div class="breadcrumbinfo">
+            <h1>Collection</h1>
+            <p><a href="">Home</a> / <span>Shop</span></p>
+        </div>
+    </div>
+</section>
+
+<section class="wishlistsection">
+
+    <div class="container">
+        <div class="table">
+            <div class="headrow">
+                <ul>
+                    <li>IMAGE</li>
+                    <li>PRODUCT</li>
+                    <li>PRICE</li>
+                    <li>PURCHASE</li>
+                    <li>REMOVE</li>
+                </ul>
+            </div>
+            <div class="bodyrow">
+               
+                @await Component.InvokeAsync("WishlistPageItem")
+                
+            </div>
+        </div>
+
+    </div>
+</section>

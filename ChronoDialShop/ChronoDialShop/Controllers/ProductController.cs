@@ -70,6 +70,87 @@ namespace ChronoDialShop.Controllers
             return View(productVm);
         }
 
+        public async Task<IActionResult> Cart()
+        {
+            var products = await _context.Products.Where(x => !x.SoftDelete).Include(x => x.Brand)
+              .Include(x => x.ProductImages)
+              .Include(x => x.ProductSize)
+              .ThenInclude(bt => bt.Size)
+              .Include(x => x.Vendor).ToListAsync();
+            return View(products);
+        }
+
+        public async Task<IActionResult> Wishlist()
+        {
+            var products = await _context.Products.Where(x => !x.SoftDelete).Include(x => x.Brand)
+              .Include(x => x.ProductImages)
+              .Include(x => x.ProductSize)
+              .ThenInclude(bt => bt.Size)
+              .Include(x => x.Vendor).ToListAsync();
+            return View(products);
+        }
+
+        public async Task<IActionResult> AddToWishlist(int id)
+        {
+            var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
+            if (!existProduct) return NotFound();
+
+            List<WishlistVm>? basketVm = GetWishlist();
+            WishlistVm cartVm = basketVm.Find(x => x.Id == id);
+            if(cartVm == null) 
+            {
+                basketVm.Add(new WishlistVm
+                {
+                    Count = 1,
+                    Id = id
+                });
+            }
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            return RedirectToAction("Index");
+        }
+
+
+
+        public async Task<IActionResult> RemoveFromWishlist(int id)
+        {
+            List<WishlistVm>? basketVm = GetWishlist();
+            WishlistVm cartVm = basketVm.Find(x => x.Id == id);
+
+            if (cartVm != null)
+            {
+                basketVm.Remove(cartVm);
+
+            }
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            return RedirectToAction("Index");
+        }
+
+
+        private List<WishlistVm> GetWishlist()
+        {
+            List<WishlistVm> basketVms;
+            if (Request.Cookies["basket"] != null)
+            {
+                basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["basket"]);
+            }
+            else basketVms = new List<WishlistVm>();
+            return basketVms;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public async Task<IActionResult> AddToCart(int id)
         {
             var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
@@ -92,6 +173,25 @@ namespace ChronoDialShop.Controllers
             Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
             return RedirectToAction("Index");
         }
+        
+
+
+
+        public async Task<IActionResult> RemoveFromCart(int id)
+        {
+            List<BasketVm>? basketVm = GetBasket();
+            BasketVm cartVm = basketVm.Find(x => x.Id == id);
+
+            if (cartVm != null)
+            {
+                basketVm.Remove(cartVm);
+               
+            }
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            return RedirectToAction("Index");
+        }
+
+
         private List<BasketVm> GetBasket()
         {
             List<BasketVm> basketVms;

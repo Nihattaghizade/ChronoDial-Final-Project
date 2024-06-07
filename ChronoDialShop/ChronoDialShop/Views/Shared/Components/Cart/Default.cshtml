@@ -43,7 +43,8 @@
                         <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>*@
                         <span style="font-size:1rem; font-weight:500;">Count: @product.Count</span>
                     </div>
-                    <button class="trash" onclick="removeFromCart('@product.Id')"><i class="fa-solid fa-trash"></i></button>
+                    @*<button class="trash" onclick="removeFromCart('@product.Id')"><i class="fa-solid fa-trash"></i></button>*@
+                    <a class="trash" asp-action="RemoveFromCart" asp-controller="Product" asp-route-id="@product.Id"><i class="fa-solid fa-trash"></i></a>
                 </div>
             </div>
         </div>

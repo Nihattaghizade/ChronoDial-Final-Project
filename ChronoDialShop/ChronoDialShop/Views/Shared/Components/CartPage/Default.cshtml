@@ -1,0 +1,44 @@
+﻿@model List<BasketItemVm>
+@*@{
+    decimal totalPrice = Model.Sum(x => x.Count * x.Price);
+}*@
+
+@foreach(var product in Model)
+{
+    <div class="tbody">
+        <div class="productside">
+            <div class="imgside">
+                <img src="~/client/image/product/@product.Image" alt="">
+            </div>
+            <div class="infoside">
+                @*<div class="brend">Qua Timer</div>*@
+                <div class="name">@product.Name</div>
+                <div class="price proitem">$@product.Price</div>
+                @*<div class="size proitem">Size: 24mm</div>
+                <div class="color proitem">Color: Silver</div>
+                <div class="material proitem">Material: Leather</div>*@
+            </div>
+        </div>
+        <div class="quantityside">
+            <div class="count">
+                <!-- <span>- </span><span> 3 </span><span> +</span> -->
+                @*<button class="decreasebtn">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="number" name="" id="" value="0" />
+                <button class="increasebtn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>*@
+                <span style="font-size:1rem; font-weight:500;">Count: @product.Count</span>
+            </div>
+            <div class="trash">
+                <a asp-action="RemoveFromCart" asp-controller="Product" asp-route-id="@product.Id" class="trashbutton">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            </div>
+        </div>
+        <div class="totalside">
+            <span>$@product.Price*@product.Count</span>
+        </div>
+    </div>
+}

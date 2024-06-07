@@ -132,12 +132,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Product/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Product/Wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxXaXNobGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/BandTypeShop/Default.cshtml]
@@ -154,6 +162,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Breitling/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQnJlaXRsaW5nXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/CartPage/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFBhZ2VcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Cart/Default.cshtml]
@@ -186,6 +198,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Visualization/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlzdWFsaXphdGlvblxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/WishlistPageItem/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV2lzaGxpc3RQYWdlSXRlbVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/_Layout.cshtml]
