@@ -73,7 +73,7 @@
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Brand</label>
                         <select asp-for="BrandId" asp-items="@(new SelectList(ViewBag.Brands,nameof(Brand.Id),nameof(Brand.Name)))" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <option selected>Select Category</option>
+                            <option selected>Select Brand</option>
                         </select>
                         <span asp-validation-for="BrandId" class="text-danger"></span>
                     </div>

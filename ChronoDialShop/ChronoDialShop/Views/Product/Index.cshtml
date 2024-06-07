@@ -131,6 +131,137 @@
         //document.querySelectorAll(".brand-item").forEach(brand => {
         //    var id = brand.dataset.id;
 
+        //function getFilterDto() {
+        //    var brandsIds = [];
+        //    var vendorsIds = [];
+        //    var bandTypesIds = [];
+        //    var visualizationsIds = [];
+        //    var innerColorsIds = [];
+
+        //    $("input[name='BrandsIds']:checked").each(function () {
+        //        brandsIds.push(parseInt($(this).val()));
+        //    });
+        //    $("input[name='VendorsIds']:checked").each(function () {
+        //        vendorsIds.push(parseInt($(this).val()));
+        //    });
+        //    $("input[name='BandTypesIds']:checked").each(function () {
+        //        bandTypesIds.push(parseInt($(this).val()));
+        //    });
+        //    $("input[name='VisualizationsIds']:checked").each(function () {
+        //        visualizationsIds.push(parseInt($(this).val()));
+        //    });
+        //    $("input[name='InnerColorsIds']:checked").each(function () {
+        //        innerColorsIds.push(parseInt($(this).val()));
+        //    });
+
+
+        //    //var minPrice = parseInt($("#slider-min-price").val());
+        //    //var maxPrice = parseInt($("#slider-max-price").val());
+
+        //    return {
+        //        BrandsIds: brandsIds,
+        //        VendorsIds: vendorsIds,
+        //        BandTypesIds: bandTypesIds,
+        //        VisualizationsIds: visualizationsIds,
+        //        InnerColorsIds: innerColorsIds,
+        //        //MinPrice: isNaN(minPrice) ? 0 : minPrice,
+        //        //MaxPrice: isNaN(maxPrice) ? 20000 : maxPrice,
+        //    };
+        //}
+
+
+
+        //const sendSortRequest = async (id) => {
+        //    const dto = getFilterDto();
+
+        //    try {
+        //        const response = await fetch(`/Product/SortProducts/${id}`, {
+        //            method: 'POST',
+        //            headers: {
+        //                'Content-Type': 'application/json'
+        //            },
+        //            body: dto
+        //        });
+
+        //        if (response.ok) {
+        //            const data = await response.text();
+        //            //console.log(data);
+        //            document.querySelector(".productscontainer").innerHTML = data;
+        //        } else {
+        //            console.error('Failed to fetch sorted products');
+        //        }
+        //    } catch (error) {
+        //        console.error('Error:', error);
+        //    }
+        //};
+
+
+
+        //const sendFilterRequest = async (id) => {
+        //    const dto = getFilterDto();
+        //    console.log(dto);
+        //    try {
+        //        const response = await fetch(`/Product/FilterViewProducts/${id}`, {
+        //            method: 'POST',
+        //            headers: {
+        //                'Content-Type': 'application/json'
+        //            },
+        //            body: dto
+        //        });
+
+        //        if (response.ok) {
+        //            const data = await response.text();
+        //            console.log(data);
+        //            document.querySelector(".productscontainer").innerHTML = data;
+        //        } else {
+        //            console.error('Failed to fetch sorted products');
+        //        }
+        //    } catch (error) {
+        //        console.error('Error:', error);
+        //    }
+        //};
+
+        //// Add event listeners to all checkboxes
+        //document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        //    checkbox.addEventListener('click', async () => {
+        //        await sendFilterRequest(checkbox.value);
+        //    });
+        //});
+
+        //// Add event listeners to all radio buttons
+        ////document.querySelectorAll('.allsortlist input[type="radio"]').forEach(radio => {
+        ////    radio.addEventListener('click', async (e) => {
+        ////        const sortId = e.target.closest('li').id;
+        ////        await sendRequest(sortId);
+        ////    });
+        ////});
+
+        //document.querySelector('#sort').addEventListener('change', (e) => {
+        //    const sortId = getCurrentOptionId();
+        //    console.log(sortId);
+        //    sendSortRequest(sortId);
+        //});
+
+        //function getCurrentOptionId() {
+        //    var selectElement = document.getElementById("sort");
+        //    var selectedIndex = selectElement.selectedIndex;
+        //    var selectedOption = selectElement.options[selectedIndex];
+        //    var selectedOptionId = selectedOption.value;
+        //    return selectedOptionId;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
         function getFilterDto() {
             var brandsIds = [];
             var vendorsIds = [];
@@ -154,38 +285,53 @@
                 innerColorsIds.push(parseInt($(this).val()));
             });
 
-
-            //var minPrice = parseInt($("#slider-min-price").val());
-            //var maxPrice = parseInt($("#slider-max-price").val());
-
             return {
                 BrandsIds: brandsIds,
                 VendorsIds: vendorsIds,
                 BandTypesIds: bandTypesIds,
                 VisualizationsIds: visualizationsIds,
-                InnerColorsIds: innerColorsIds,
-                //MinPrice: isNaN(minPrice) ? 0 : minPrice,
-                //MaxPrice: isNaN(maxPrice) ? 20000 : maxPrice,
+                InnerColorsIds: innerColorsIds
             };
         }
 
-
-
-        const sendSortRequest = async (id) => {
+        const sendFilterRequest = async () => {
             const dto = getFilterDto();
 
             try {
-                const response = await fetch(`/Product/SortProducts/${id}`, {
+                const response = await fetch(`/Product/FilterViewProducts`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: dto
+                    body: JSON.stringify(dto)
                 });
 
                 if (response.ok) {
                     const data = await response.text();
-                    //console.log(data);
+                    document.querySelector(".productscontainer").innerHTML = data;
+                } else {
+                    console.error('Failed to fetch filtered products');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        const sendSortRequest = async () => {
+            const sortId = getCurrentOptionId();
+            const dto = getFilterDto();  // Get the current filters as well
+
+            try {
+                const response = await fetch(`/Product/SortProducts/${sortId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dto)
+                });
+
+                if (response.ok) {
+                    const data = await response.text();
                     document.querySelector(".productscontainer").innerHTML = data;
                 } else {
                     console.error('Failed to fetch sorted products');
@@ -195,51 +341,23 @@
             }
         };
 
-
-
-        const sendFilterRequest = async (id) => {
-            const dto = getFilterDto();
-            console.log(dto);
-            try {
-                const response = await fetch(`/Product/FilterViewProducts/${id}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: dto
-                });
-
-                if (response.ok) {
-                    const data = await response.text();
-                    console.log(data);
-                    document.querySelector(".productscontainer").innerHTML = data;
-                } else {
-                    console.error('Failed to fetch sorted products');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        };
-
-        // Add event listeners to all checkboxes
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('click', async () => {
-                await sendFilterRequest(checkbox.value);
-            });
+            checkbox.addEventListener('change', sendFilterRequest);
         });
 
-        // Add event listeners to all radio buttons
-        //document.querySelectorAll('.allsortlist input[type="radio"]').forEach(radio => {
-        //    radio.addEventListener('click', async (e) => {
-        //        const sortId = e.target.closest('li').id;
-        //        await sendRequest(sortId);
-        //    });
-        //});
+        document.querySelector('#sort').addEventListener('change', async (e) => {
+            await sendSortRequest();
+        });
 
-        document.querySelector('#sort').addEventListener('change', (e) => {
-            const sortId = getCurrentOptionId();
-            console.log(sortId);
-            sendSortRequest(sortId);
+        document.querySelectorAll('.eachfilterinnercontainer').forEach(container => {
+            container.addEventListener('click', () => {
+                const filterList = container.nextElementSibling;
+                if (filterList.style.display === "none" || filterList.style.display === "") {
+                    filterList.style.display = "block";
+                } else {
+                    filterList.style.display = "none";
+                }
+            });
         });
 
         function getCurrentOptionId() {
@@ -250,12 +368,16 @@
             return selectedOptionId;
         }
 
+
+
+
     </script>
-
-
-
-
-
-     
 }
+
+
+
+
+
+
+
 

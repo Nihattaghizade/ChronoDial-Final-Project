@@ -2320,12 +2320,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\background\homebackgroundimage1.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\9688ae57-31f8-418d-bd68-201a48b79e09_silicone.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\924247bd-f0b6-4b48-b55c-0f8ca3799eff_leather.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/bandtype/9688ae57-31f8-418d-bd68-201a48b79e09_silicone.jpg</RelativePath>
+      <RelativePath>client/image/bandtype/924247bd-f0b6-4b48-b55c-0f8ca3799eff_leather.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2334,14 +2334,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\9688ae57-31f8-418d-bd68-201a48b79e09_silicone.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\924247bd-f0b6-4b48-b55c-0f8ca3799eff_leather.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\a3d09e3e-a3ba-40ef-a618-e171b440e45a_alligator.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\bd503f0c-f197-4be9-bc8b-0031f8ba8d21_silicone.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/bandtype/a3d09e3e-a3ba-40ef-a618-e171b440e45a_alligator.jpg</RelativePath>
+      <RelativePath>client/image/bandtype/bd503f0c-f197-4be9-bc8b-0031f8ba8d21_silicone.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2350,14 +2350,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\a3d09e3e-a3ba-40ef-a618-e171b440e45a_alligator.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\bd503f0c-f197-4be9-bc8b-0031f8ba8d21_silicone.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\ab510298-db4b-40ab-909b-f7b6604fe5ca_leather.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\d7c7b336-60dc-4e58-8b80-a57adf824dd1_stainlesssteel.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/bandtype/ab510298-db4b-40ab-909b-f7b6604fe5ca_leather.webp</RelativePath>
+      <RelativePath>client/image/bandtype/d7c7b336-60dc-4e58-8b80-a57adf824dd1_stainlesssteel.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2366,14 +2366,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\ab510298-db4b-40ab-909b-f7b6604fe5ca_leather.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\d7c7b336-60dc-4e58-8b80-a57adf824dd1_stainlesssteel.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\d8addf28-b236-48e2-9b3f-d35936ea8740_stainlesssteel.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\f4c2d008-3394-498b-bdd6-61de1a66ed25_alligator.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/bandtype/d8addf28-b236-48e2-9b3f-d35936ea8740_stainlesssteel.jpg</RelativePath>
+      <RelativePath>client/image/bandtype/f4c2d008-3394-498b-bdd6-61de1a66ed25_alligator.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2382,7 +2382,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\d8addf28-b236-48e2-9b3f-d35936ea8740_stainlesssteel.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\bandtype\f4c2d008-3394-498b-bdd6-61de1a66ed25_alligator.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\breadcrumbbackgroundimg\breadcrumbimg.webp))">
       <SourceType>Package</SourceType>
@@ -2448,12 +2448,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\logo\chronodiallogo.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\25b86c13-b1d1-4968-9383-457bb073c69e_numberdial2.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\3dc850fd-e854-4b08-bbdf-51b9c8c977f0_numberdial2.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/numberdial/25b86c13-b1d1-4968-9383-457bb073c69e_numberdial2.webp</RelativePath>
+      <RelativePath>client/image/numberdial/3dc850fd-e854-4b08-bbdf-51b9c8c977f0_numberdial2.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2462,14 +2462,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\25b86c13-b1d1-4968-9383-457bb073c69e_numberdial2.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\3dc850fd-e854-4b08-bbdf-51b9c8c977f0_numberdial2.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\7f720745-8b82-4795-8324-f93dde866826_numberdial1.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\ad5f134f-581c-4a26-8eee-bf160d938a3d_numberdial3.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/numberdial/7f720745-8b82-4795-8324-f93dde866826_numberdial1.webp</RelativePath>
+      <RelativePath>client/image/numberdial/ad5f134f-581c-4a26-8eee-bf160d938a3d_numberdial3.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2478,14 +2478,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\7f720745-8b82-4795-8324-f93dde866826_numberdial1.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\ad5f134f-581c-4a26-8eee-bf160d938a3d_numberdial3.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\9708d917-e0cf-47f0-98de-10074d81c513_numberdial4.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\b9627bca-266e-4b69-8ffe-e536764f9931_numberdial5.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/numberdial/9708d917-e0cf-47f0-98de-10074d81c513_numberdial4.webp</RelativePath>
+      <RelativePath>client/image/numberdial/b9627bca-266e-4b69-8ffe-e536764f9931_numberdial5.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2494,14 +2494,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\9708d917-e0cf-47f0-98de-10074d81c513_numberdial4.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\b9627bca-266e-4b69-8ffe-e536764f9931_numberdial5.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\9fa42f7b-8fec-47d7-9efe-2679853e5301_numberdial3.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\b9b0f0a1-a5e8-4ce3-906c-79510fcfe306_numberdial1.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/numberdial/9fa42f7b-8fec-47d7-9efe-2679853e5301_numberdial3.webp</RelativePath>
+      <RelativePath>client/image/numberdial/b9b0f0a1-a5e8-4ce3-906c-79510fcfe306_numberdial1.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2510,14 +2510,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\9fa42f7b-8fec-47d7-9efe-2679853e5301_numberdial3.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\b9b0f0a1-a5e8-4ce3-906c-79510fcfe306_numberdial1.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\e963d3aa-2636-420e-ad67-d6d537ee68ad_numberdial5.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\c2dd68b1-83c6-4efe-ae72-5cc2d8ae83ce_numberdial4.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/numberdial/e963d3aa-2636-420e-ad67-d6d537ee68ad_numberdial5.webp</RelativePath>
+      <RelativePath>client/image/numberdial/c2dd68b1-83c6-4efe-ae72-5cc2d8ae83ce_numberdial4.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2526,14 +2526,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\e963d3aa-2636-420e-ad67-d6d537ee68ad_numberdial5.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\numberdial\c2dd68b1-83c6-4efe-ae72-5cc2d8ae83ce_numberdial4.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\45d10278-b850-44e5-95ab-a27ebe2bf0fd_pp-cvaa-001-5.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\032d867e-f3f6-4392-9966-c9c01c45efba_pp-cvaa-001-4.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/product/45d10278-b850-44e5-95ab-a27ebe2bf0fd_pp-cvaa-001-5.webp</RelativePath>
+      <RelativePath>client/image/product/032d867e-f3f6-4392-9966-c9c01c45efba_pp-cvaa-001-4.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2542,14 +2542,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\45d10278-b850-44e5-95ab-a27ebe2bf0fd_pp-cvaa-001-5.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\032d867e-f3f6-4392-9966-c9c01c45efba_pp-cvaa-001-4.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\9015ad30-4968-45dd-8ce7-5bd30b636792_pp-cvaa-001-2.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\055475ee-f39e-4575-9fa3-2a4553c3a424_pp-cvaa-001-3.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/product/9015ad30-4968-45dd-8ce7-5bd30b636792_pp-cvaa-001-2.webp</RelativePath>
+      <RelativePath>client/image/product/055475ee-f39e-4575-9fa3-2a4553c3a424_pp-cvaa-001-3.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2558,14 +2558,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\9015ad30-4968-45dd-8ce7-5bd30b636792_pp-cvaa-001-2.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\055475ee-f39e-4575-9fa3-2a4553c3a424_pp-cvaa-001-3.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\90b92a8c-0ae8-43be-a6ac-446d46442fd0_pp-cvaa-001-4.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\07a834fd-1515-4f9f-a9bd-7774fd90c991_b-na-001-1.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/product/90b92a8c-0ae8-43be-a6ac-446d46442fd0_pp-cvaa-001-4.webp</RelativePath>
+      <RelativePath>client/image/product/07a834fd-1515-4f9f-a9bd-7774fd90c991_b-na-001-1.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2574,14 +2574,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\90b92a8c-0ae8-43be-a6ac-446d46442fd0_pp-cvaa-001-4.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\07a834fd-1515-4f9f-a9bd-7774fd90c991_b-na-001-1.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e4aad03a-cff5-454c-9bb4-64f7fc09cafe_pp-cvaa-001-1.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\0fe82577-079f-434d-a79a-47a1731e39ef_h-jc-001-2.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/product/e4aad03a-cff5-454c-9bb4-64f7fc09cafe_pp-cvaa-001-1.webp</RelativePath>
+      <RelativePath>client/image/product/0fe82577-079f-434d-a79a-47a1731e39ef_h-jc-001-2.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2590,14 +2590,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e4aad03a-cff5-454c-9bb4-64f7fc09cafe_pp-cvaa-001-1.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\0fe82577-079f-434d-a79a-47a1731e39ef_h-jc-001-2.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e700a9b0-78dc-4389-a034-e8a1807d4f68_pp-cvaa-001-3.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\118892f2-310e-44a0-ba3a-c1ef92e2c10a_h-tfa-001-2.webp))">
       <SourceType>Package</SourceType>
       <SourceId>ChronoDialShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ChronoDialShop</BasePath>
-      <RelativePath>client/image/product/e700a9b0-78dc-4389-a034-e8a1807d4f68_pp-cvaa-001-3.webp</RelativePath>
+      <RelativePath>client/image/product/118892f2-310e-44a0-ba3a-c1ef92e2c10a_h-tfa-001-2.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2606,7 +2606,583 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e700a9b0-78dc-4389-a034-e8a1807d4f68_pp-cvaa-001-3.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\118892f2-310e-44a0-ba3a-c1ef92e2c10a_h-tfa-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\1b85653c-95db-4446-8c3a-fc03f5976c9d_ap-roc-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/1b85653c-95db-4446-8c3a-fc03f5976c9d_ap-roc-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\1b85653c-95db-4446-8c3a-fc03f5976c9d_ap-roc-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\29cb2ba3-e3ba-4b2d-aad6-5e3ea2a6cf7b_pp-cvaa-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/29cb2ba3-e3ba-4b2d-aad6-5e3ea2a6cf7b_pp-cvaa-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\29cb2ba3-e3ba-4b2d-aad6-5e3ea2a6cf7b_pp-cvaa-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\34a4604f-d9b5-4962-8adb-28dbc11c7049_h-jc-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/34a4604f-d9b5-4962-8adb-28dbc11c7049_h-jc-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\34a4604f-d9b5-4962-8adb-28dbc11c7049_h-jc-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\3e1da6d7-7bc8-41ea-9609-a0a35740de25_h-jc-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/3e1da6d7-7bc8-41ea-9609-a0a35740de25_h-jc-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\3e1da6d7-7bc8-41ea-9609-a0a35740de25_h-jc-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\40204e82-830b-4c65-a120-ec50a718d5a7_h-tfa-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/40204e82-830b-4c65-a120-ec50a718d5a7_h-tfa-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\40204e82-830b-4c65-a120-ec50a718d5a7_h-tfa-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\45f89d83-5845-44a8-a4c5-ab78dab57f32_pp-cvaa-001-5.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/45f89d83-5845-44a8-a4c5-ab78dab57f32_pp-cvaa-001-5.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\45f89d83-5845-44a8-a4c5-ab78dab57f32_pp-cvaa-001-5.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4810e86c-eab9-444a-b1ef-b5c3e18fa1d9_h-tfa-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/4810e86c-eab9-444a-b1ef-b5c3e18fa1d9_h-tfa-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4810e86c-eab9-444a-b1ef-b5c3e18fa1d9_h-tfa-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4a0f9b20-8cf9-4075-8875-989ce3cc952d_h-jc-001-1-111.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/4a0f9b20-8cf9-4075-8875-989ce3cc952d_h-jc-001-1-111.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4a0f9b20-8cf9-4075-8875-989ce3cc952d_h-jc-001-1-111.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4d5085bc-fa7c-4242-9951-cd6ce1e6df43_ap-roc-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/4d5085bc-fa7c-4242-9951-cd6ce1e6df43_ap-roc-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\4d5085bc-fa7c-4242-9951-cd6ce1e6df43_ap-roc-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\5557c40a-d7e7-49b5-8dd6-9123a0481d35_b-bgt-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/5557c40a-d7e7-49b5-8dd6-9123a0481d35_b-bgt-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\5557c40a-d7e7-49b5-8dd6-9123a0481d35_b-bgt-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\55760917-80a4-4644-a717-7ea9ef79e90f_b-bgt-001-4.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/55760917-80a4-4644-a717-7ea9ef79e90f_b-bgt-001-4.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\55760917-80a4-4644-a717-7ea9ef79e90f_b-bgt-001-4.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\60a1cffa-0e0a-4db6-a300-55852eb57b7e_b-bgt-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/60a1cffa-0e0a-4db6-a300-55852eb57b7e_b-bgt-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\60a1cffa-0e0a-4db6-a300-55852eb57b7e_b-bgt-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\659992c3-5e4a-44f1-80f9-b1f12fe6497e_b-na-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/659992c3-5e4a-44f1-80f9-b1f12fe6497e_b-na-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\659992c3-5e4a-44f1-80f9-b1f12fe6497e_b-na-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\7cece632-8533-4559-a642-80fa795a363e_h-tfa-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/7cece632-8533-4559-a642-80fa795a363e_h-tfa-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\7cece632-8533-4559-a642-80fa795a363e_h-tfa-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\7ffcc841-c013-4614-b176-58122cce2d95_h-jc-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/7ffcc841-c013-4614-b176-58122cce2d95_h-jc-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\7ffcc841-c013-4614-b176-58122cce2d95_h-jc-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\80ca0e1a-5737-47ce-b923-ea2ddcf6434e_o-dsf-001-4.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/80ca0e1a-5737-47ce-b923-ea2ddcf6434e_o-dsf-001-4.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\80ca0e1a-5737-47ce-b923-ea2ddcf6434e_o-dsf-001-4.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\85d8645f-fd08-4432-b567-a9e5d7e17960_h-jc-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/85d8645f-fd08-4432-b567-a9e5d7e17960_h-jc-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\85d8645f-fd08-4432-b567-a9e5d7e17960_h-jc-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\87f09291-91e4-48ed-a5ab-0b5c9af737bb_b-na-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/87f09291-91e4-48ed-a5ab-0b5c9af737bb_b-na-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\87f09291-91e4-48ed-a5ab-0b5c9af737bb_b-na-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\8a73d9e5-ec56-4072-ac35-65867747ac6f_pp-cvaa-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/8a73d9e5-ec56-4072-ac35-65867747ac6f_pp-cvaa-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\8a73d9e5-ec56-4072-ac35-65867747ac6f_pp-cvaa-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\8b164a87-b068-4aab-9857-1da22c5197c7_h-tfa-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/8b164a87-b068-4aab-9857-1da22c5197c7_h-tfa-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\8b164a87-b068-4aab-9857-1da22c5197c7_h-tfa-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\92d631dd-40dc-45e5-ae0b-866b51e8db4a_b-na-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/92d631dd-40dc-45e5-ae0b-866b51e8db4a_b-na-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\92d631dd-40dc-45e5-ae0b-866b51e8db4a_b-na-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\aaf2d0e6-ab28-46d3-ae5a-10bf1b18dc4a_b-na-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/aaf2d0e6-ab28-46d3-ae5a-10bf1b18dc4a_b-na-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\aaf2d0e6-ab28-46d3-ae5a-10bf1b18dc4a_b-na-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\ad92d1fa-d68b-4cba-9170-47577351c3bc_b-na-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/ad92d1fa-d68b-4cba-9170-47577351c3bc_b-na-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\ad92d1fa-d68b-4cba-9170-47577351c3bc_b-na-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\b7e03823-68c0-4636-9224-e7196887eaa6_b-na-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/b7e03823-68c0-4636-9224-e7196887eaa6_b-na-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\b7e03823-68c0-4636-9224-e7196887eaa6_b-na-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\b95587cd-7a1d-49e0-b7b8-067ef66ca8a4_b-na-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/b95587cd-7a1d-49e0-b7b8-067ef66ca8a4_b-na-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\b95587cd-7a1d-49e0-b7b8-067ef66ca8a4_b-na-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\bb3756a3-50ad-449b-afba-48f4ad75fe71_h-jc-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/bb3756a3-50ad-449b-afba-48f4ad75fe71_h-jc-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\bb3756a3-50ad-449b-afba-48f4ad75fe71_h-jc-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c074f68e-9569-457d-a933-335eca159e1d_h-tfa-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/c074f68e-9569-457d-a933-335eca159e1d_h-tfa-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c074f68e-9569-457d-a933-335eca159e1d_h-tfa-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c87d503b-4590-4da9-933a-c0520f1f7ac2_o-dsf-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/c87d503b-4590-4da9-933a-c0520f1f7ac2_o-dsf-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c87d503b-4590-4da9-933a-c0520f1f7ac2_o-dsf-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c96f1173-118d-4c9d-86ef-223309cc48a9_h-tfa-001-3.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/c96f1173-118d-4c9d-86ef-223309cc48a9_h-tfa-001-3.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c96f1173-118d-4c9d-86ef-223309cc48a9_h-tfa-001-3.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c9f34852-099d-478e-b8ad-ee0b899a039f_h-tfa-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/c9f34852-099d-478e-b8ad-ee0b899a039f_h-tfa-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\c9f34852-099d-478e-b8ad-ee0b899a039f_h-tfa-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\d140de23-6b69-4794-a302-242ca5f626f7_h-jc-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/d140de23-6b69-4794-a302-242ca5f626f7_h-jc-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\d140de23-6b69-4794-a302-242ca5f626f7_h-jc-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\d1f322ca-ee83-4c66-9519-f6e73b69e6e7_o-dsf-001-1.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/d1f322ca-ee83-4c66-9519-f6e73b69e6e7_o-dsf-001-1.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\d1f322ca-ee83-4c66-9519-f6e73b69e6e7_o-dsf-001-1.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e1c6e266-12ba-4561-9b99-fc29c5f33f95_o-dsf-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/e1c6e266-12ba-4561-9b99-fc29c5f33f95_o-dsf-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e1c6e266-12ba-4561-9b99-fc29c5f33f95_o-dsf-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e50959ca-85a9-4b75-be82-3496da449dc3_b-bgt-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/e50959ca-85a9-4b75-be82-3496da449dc3_b-bgt-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e50959ca-85a9-4b75-be82-3496da449dc3_b-bgt-001-2.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e564548f-9ef3-4908-bb69-27e0313eb12f_ap-roc-001-4.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/e564548f-9ef3-4908-bb69-27e0313eb12f_ap-roc-001-4.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\e564548f-9ef3-4908-bb69-27e0313eb12f_ap-roc-001-4.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\f12120c3-f746-4b9c-b1d7-faef1e9ed2d7_ap-roc-001-2.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChronoDialShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChronoDialShop</BasePath>
+      <RelativePath>client/image/product/f12120c3-f746-4b9c-b1d7-faef1e9ed2d7_ap-roc-001-2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\image\product\f12120c3-f746-4b9c-b1d7-faef1e9ed2d7_ap-roc-001-2.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\client\js\homepage.js))">
       <SourceType>Package</SourceType>

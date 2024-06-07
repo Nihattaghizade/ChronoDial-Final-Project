@@ -1,4 +1,12 @@
-﻿namespace ChronoDialShop.ViewModels
+﻿using ChronoDialShop.Models;
+using ChronoDialShop.ViewModels;
+using Humanizer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
+using System;
+
+namespace ChronoDialShop.ViewModels
 {
 	public class ProductFilterVM
 	{
@@ -13,3 +21,4 @@
 
 	}
 }
+
