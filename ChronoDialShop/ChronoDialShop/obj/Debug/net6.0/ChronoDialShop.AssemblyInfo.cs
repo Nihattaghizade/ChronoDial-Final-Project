@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChronoDialShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3bfecaf5d920b1b7424637ec12cc92372c89a09")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChronoDialShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChronoDialShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

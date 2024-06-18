@@ -119,6 +119,33 @@ namespace ChronoDialShop.Migrations
                     b.ToTable("BandTypes");
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -484,6 +511,25 @@ namespace ChronoDialShop.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.BasketItem", b =>
+                {
+                    b.HasOne("ChronoDialShop.Models.Product", "Product")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ChronoDialShop.Models.AppUser", "User")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.Product", b =>
                 {
                     b.HasOne("ChronoDialShop.Models.BandType", "BandType")
@@ -619,6 +665,11 @@ namespace ChronoDialShop.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.AppUser", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.BandType", b =>
                 {
                     b.Navigation("Products");
@@ -636,6 +687,8 @@ namespace ChronoDialShop.Migrations
 
             modelBuilder.Entity("ChronoDialShop.Models.Product", b =>
                 {
+                    b.Navigation("BasketItems");
+
                     b.Navigation("ProductImages");
 
                     b.Navigation("ProductSize");

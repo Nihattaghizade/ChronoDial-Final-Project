@@ -1,0 +1,14 @@
+﻿@model List<Product>
+
+@foreach (var product in Model)
+{
+    <a href="#" class="searchedproducts">
+        <div class="searchedproductimgbox">
+            <img src="~/client/image/product/@(product.ProductImages.FirstOrDefault(x => x.IsMain).Url)" alt="">
+        </div>
+        <div class="searchedproductinfobox">
+            <h5>@product.Name</h5>
+            <span>$@product.SellPrice</span>
+        </div>
+    </a>
+}

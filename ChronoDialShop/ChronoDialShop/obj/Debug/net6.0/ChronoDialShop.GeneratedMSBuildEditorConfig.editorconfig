@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChronoDialShop
 build_property.RootNamespace = ChronoDialShop
 build_property.ProjectDir = C:\Users\99450\OneDrive\Masaüstü\ChronoDial-Final-Project\ChronoDialShop\ChronoDialShop\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -156,6 +158,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFuZFR5cGVcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Basket/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFza2V0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Brand/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQnJhbmRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,10 +172,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/CartPage/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFBhZ2VcRGVmYXVsdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Cart/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/Components/Hublot/Default.cshtml]
@@ -210,6 +212,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/_ProductPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/Shared/_SearchResultsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZWFyY2hSZXN1bHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/99450/OneDrive/Masaüstü/ChronoDial-Final-Project/ChronoDialShop/ChronoDialShop/Views/_ViewImports.cshtml]

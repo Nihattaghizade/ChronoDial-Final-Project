@@ -17,7 +17,7 @@ public class WishlistPageItemViewComponent : ViewComponent
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        List<WishlistVm>? basketVm = GetWishlist();
+        List<WishlistVm>? basketVm = GetWishlistFromCookies();
         List<WishlisItemVm> basketItemsVm = new List<WishlisItemVm>();
         foreach (var basketData in basketVm)
         {
@@ -34,12 +34,12 @@ public class WishlistPageItemViewComponent : ViewComponent
 
         return View(basketItemsVm);
     }
-    private List<WishlistVm> GetWishlist()
+    private List<WishlistVm> GetWishlistFromCookies()
     {
         List<WishlistVm> basketVms;
-        if (Request.Cookies["basket"] != null)
+        if (Request.Cookies["wishlist"] != null)
         {
-            basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["basket"]);
+            basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["wishlist"]);
         }
         else basketVms = new List<WishlistVm>();
         return basketVms;

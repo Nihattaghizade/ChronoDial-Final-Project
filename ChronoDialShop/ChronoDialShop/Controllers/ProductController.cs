@@ -1,6 +1,8 @@
 ﻿using ChronoDialShop.Data;
+using ChronoDialShop.Enums;
 using ChronoDialShop.Models;
 using ChronoDialShop.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -10,9 +12,11 @@ namespace ChronoDialShop.Controllers
 	public class ProductController : Controller
 	{
 		private readonly AppDbContext _context;
-		public ProductController(AppDbContext context)
+        private readonly UserManager<AppUser> _userManager;
+        public ProductController(AppDbContext context, UserManager<AppUser> userManager)
 		{
 			_context = context;
+            _userManager = userManager;
 		}
 		public async Task<IActionResult> Index(int page = 1, int pageSize = 10)
 		{
@@ -42,10 +46,6 @@ namespace ChronoDialShop.Controllers
 			return PartialView("_ProductPartial", new { page = page, pageSize = pageSize });
 		}
 
-		public IActionResult ProductBrandFilter(int? id)
-		{
-			return ViewComponent("ProductMain", new { brandId = id });
-		}
 
 		public async Task<IActionResult> Detail(int? id)
         {
@@ -90,14 +90,25 @@ namespace ChronoDialShop.Controllers
             return View(products);
         }
 
+
+
+
+
+
+
+
+
+
+
+
         public async Task<IActionResult> AddToWishlist(int id)
         {
             var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
             if (!existProduct) return NotFound();
 
-            List<WishlistVm>? basketVm = GetWishlist();
+            List<WishlistVm>? basketVm = GetWishlistFromCookies();
             WishlistVm cartVm = basketVm.Find(x => x.Id == id);
-            if(cartVm == null) 
+            if (cartVm == null)
             {
                 basketVm.Add(new WishlistVm
                 {
@@ -105,7 +116,7 @@ namespace ChronoDialShop.Controllers
                     Id = id
                 });
             }
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
             return RedirectToAction("Index");
         }
 
@@ -113,7 +124,7 @@ namespace ChronoDialShop.Controllers
 
         public async Task<IActionResult> RemoveFromWishlist(int id)
         {
-            List<WishlistVm>? basketVm = GetWishlist();
+            List<WishlistVm>? basketVm = GetWishlistFromCookies();
             WishlistVm cartVm = basketVm.Find(x => x.Id == id);
 
             if (cartVm != null)
@@ -121,22 +132,21 @@ namespace ChronoDialShop.Controllers
                 basketVm.Remove(cartVm);
 
             }
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
             return RedirectToAction("Index");
         }
 
 
-        private List<WishlistVm> GetWishlist()
+        private List<WishlistVm> GetWishlistFromCookies()
         {
             List<WishlistVm> basketVms;
-            if (Request.Cookies["basket"] != null)
+            if (Request.Cookies["wishlist"] != null)
             {
-                basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["basket"]);
+                basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["wishlist"]);
             }
             else basketVms = new List<WishlistVm>();
             return basketVms;
         }
-
 
 
 
@@ -156,43 +166,80 @@ namespace ChronoDialShop.Controllers
             var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
             if (!existProduct) return NotFound();
 
-            List<BasketVm>? basketVm = GetBasket();
-            BasketVm cartVm = basketVm.Find(x => x.Id == id);
-            if (cartVm != null)
+            if (User.Identity.IsAuthenticated)
             {
-                cartVm.Count++;
+                var user = await _userManager.GetUserAsync(User);
+                var basketItem = await _context.BasketItems
+                    .FirstOrDefaultAsync(x => x.ProductId == id && x.UserId == user.Id);
+
+                if (basketItem != null)
+                {
+                    basketItem.Count++;
+                }
+                else
+                {
+                    _context.BasketItems.Add(new BasketItem
+                    {
+                        UserId = user.Id,
+                        ProductId = id,
+                        Count = 1
+                    });
+                }
+                await _context.SaveChangesAsync();
             }
             else
             {
-                basketVm.Add(new BasketVm
+                List<BasketVm>? basketVm = GetBasketFromCookies();
+                BasketVm cartVm = basketVm.Find(x => x.Id == id);
+                if (cartVm != null)
                 {
-                    Count = 1,
-                    Id = id
-                });
+                    cartVm.Count++;
+                }
+                else
+                {
+                    basketVm.Add(new BasketVm
+                    {
+                        Count = 1,
+                        Id = id
+                    });
+                }
+                Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
             }
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+
             return RedirectToAction("Index");
         }
-        
-
-
 
         public async Task<IActionResult> RemoveFromCart(int id)
         {
-            List<BasketVm>? basketVm = GetBasket();
-            BasketVm cartVm = basketVm.Find(x => x.Id == id);
-
-            if (cartVm != null)
+            if (User.Identity.IsAuthenticated)
             {
-                basketVm.Remove(cartVm);
-               
+                var user = await _userManager.GetUserAsync(User);
+                var basketItem = await _context.BasketItems
+                    .FirstOrDefaultAsync(x => x.ProductId == id && x.UserId == user.Id);
+
+                if (basketItem != null)
+                {
+                    _context.BasketItems.Remove(basketItem);
+                    await _context.SaveChangesAsync();
+                }
             }
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            else
+            {
+                List<BasketVm>? basketVm = GetBasketFromCookies();
+                BasketVm cartVm = basketVm.Find(x => x.Id == id);
+
+                if (cartVm != null)
+                {
+                    basketVm.Remove(cartVm);
+                }
+                Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+            }
             return RedirectToAction("Index");
         }
 
 
-        private List<BasketVm> GetBasket()
+
+        private List<BasketVm> GetBasketFromCookies()
         {
             List<BasketVm> basketVms;
             if (Request.Cookies["basket"] != null)
@@ -203,215 +250,47 @@ namespace ChronoDialShop.Controllers
             return basketVms;
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> SortProducts(int id, ProductFilterVM dto)
-        //{
-
-        //	var data = await FilterProducts(dto);
-        //	switch (id)
-        //	{
-        //		case 1:
-        //			data = data.OrderBy(Resume => Resume.Name).ToList();
-        //			break;
-
-        //		case 2:
-        //			data = data.OrderByDescending(Resume => Resume.Name).ToList();
-        //			break;
-        //		case 3:
-        //			data = data.OrderByDescending(Resume => Resume.SellPrice).ToList();
-        //			break;
-        //		case 4:
-        //			data = data.OrderBy(Resume => Resume.SellPrice).ToList();
-        //			break;
-        //		default:
-        //			break;
-        //	}
-        //	return PartialView("_ProductPartial", data);
-        //}
-
-        //[HttpPost]
-        //public async Task<List<Product>> FilterProducts(ProductFilterVM dto)
-        //{
-        //	var query = await _context.Products
-        //						.Include(x => x.ProductImages)
-        //						.Include(x => x.Brand)
-        //						.Include(x => x.BandType)
-        //						.Include(x => x.Vendor)
-        //						.Include(x => x.InnerColor)
-        //						.Include(x => x.Visualization)
-        //						.Where(x => !x.SoftDelete)
-        //						.ToListAsync();
 
 
-        //	// Filter by brand IDs
-        //	if (dto.BrandsIds != null && dto.BrandsIds.Count > 0)
-        //	{
-        //		var activeBrands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
-        //		var brands = activeBrands.Where(cat =>
-        //			dto.BrandsIds.Any(brandId => cat.Id == brandId)
-        //		);
-
-        //		query = query.Where(c => brands.Any(cat => cat.Id == c.Brand.Id)).ToList();
-
-        //	}
-
-        //	// Filter by bandtype IDs
-        //	if (dto.BandTypesIds != null && dto.BandTypesIds.Count > 0)
-        //	{
-        //		var activeBandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
-        //		var bandTypes = activeBandTypes.Where(edu =>
-        //			dto.BandTypesIds.Any(btId => edu.Id == btId)
-        //		);
-
-        //		query = query.Where(c => bandTypes.Any(edu => edu.Id == c.BandType.Id)).ToList();
-
-        //	}
-
-        //	// Filter by vendor IDs
-        //	if (dto.VendorsIds != null && dto.VendorsIds.Count > 0)
-        //	{
-        //		var activeVendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
-        //		var vendors = activeVendors.Where(lan =>
-        //			dto.VendorsIds.Any(venId => lan.Id == venId)
-        //		);
-
-        //		query = query.Where(c => vendors.Any(lan => lan.Id == c.Vendor.Id)).ToList();
-        //	}
-
-        //	// Filter by visualization IDs
-        //	if (dto.VisualizationsIds != null && dto.VisualizationsIds.Count > 0)
-        //	{
-        //		var activeVisualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
-        //		var visualizations = activeVisualizations.Where(lan =>
-        //			dto.VisualizationsIds.Any(visId => lan.Id == visId)
-        //		);
-
-        //		query = query.Where(c => visualizations.Any(lan => lan.Id == c.Visualization.Id)).ToList();
-        //	}
-
-        //	// Filter by innercolor IDs
-        //	if (dto.InnerColorsIds != null && dto.InnerColorsIds.Count > 0)
-        //	{
-        //		var activeInnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
-        //		var innerColors = activeInnerColors.Where(lan =>
-        //			dto.InnerColorsIds.Any(icId => lan.Id == icId)
-        //		);
-
-        //		query = query.Where(c => innerColors.Any(lan => lan.Id == c.InnerColor.Id)).ToList();
-        //	}
-
-        //	// Filter by minimum salary
-        //	//if (dto.MinPrice > 0)
-        //	//{
-        //	//	query = query.Where(Resume => Resume.SellPrice >= dto.MinPrice).ToList();
-        //	//}
-
-        //	//// Filter by maximum salary
-        //	//if (dto.MaxPrice < 20001)
-        //	//{
-        //	//	query = query.Where(Resume => Resume.SellPrice <= dto.MaxPrice).ToList();
-        //	//}
-
-        //	//// Filter by selected gender
-        //	//if (dto.Gender != Gender.None)
-        //	//{
-        //	//	query = query.Where(Resume => Resume.Gender == dto.Gender).ToList();
-        //	//}
-        //	return query;
-
-        //}
-
-        //[HttpPost]
-        //public async Task<IActionResult> FilterViewProducts(ProductFilterVM dto)
-        //{
-        //	var query = await _context.Products
-        //						.Include(x => x.ProductImages)
-        //						.Include(x => x.Brand)
-        //						.Include(x => x.BandType)
-        //						.Include(x => x.Vendor)
-        //						.Include(x => x.InnerColor)
-        //						.Include(x => x.Visualization)
-        //						.Where(x => !x.SoftDelete)
-        //						.ToListAsync();
 
 
-        //	// Filter by brand IDs
-        //	if (dto.BrandsIds != null && dto.BrandsIds.Count > 0)
-        //	{
-        //		var activeBrands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
-        //		var brands = activeBrands.Where(cat =>
-        //			dto.BrandsIds.Any(brandId => cat.Id == brandId)
-        //		);
 
-        //		query = query.Where(c => brands.Any(cat => cat.Id == c.Brand.Id)).ToList();
 
-        //	}
 
-        //	// Filter by bandtype IDs
-        //	if (dto.BandTypesIds != null && dto.BandTypesIds.Count > 0)
-        //	{
-        //		var activeBandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
-        //		var bandTypes = activeBandTypes.Where(edu =>
-        //			dto.BandTypesIds.Any(btId => edu.Id == btId)
-        //		);
 
-        //		query = query.Where(c => bandTypes.Any(edu => edu.Id == c.BandType.Id)).ToList();
 
-        //	}
 
-        //	// Filter by vendor IDs
-        //	if (dto.VendorsIds != null && dto.VendorsIds.Count > 0)
-        //	{
-        //		var activeVendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
-        //		var vendors = activeVendors.Where(lan =>
-        //			dto.VendorsIds.Any(venId => lan.Id == venId)
-        //		);
 
-        //		query = query.Where(c => vendors.Any(lan => lan.Id == c.Vendor.Id)).ToList();
-        //	}
 
-        //	// Filter by visualization IDs
-        //	if (dto.VisualizationsIds != null && dto.VisualizationsIds.Count > 0)
-        //	{
-        //		var activeVisualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
-        //		var visualizations = activeVisualizations.Where(lan =>
-        //			dto.VisualizationsIds.Any(visId => lan.Id == visId)
-        //		);
 
-        //		query = query.Where(c => visualizations.Any(lan => lan.Id == c.Visualization.Id)).ToList();
-        //	}
+        [HttpPost]
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm) || searchTerm.Length < 3)
+            {
+                return BadRequest("Search term must be at least 3 characters long.");
+            }
 
-        //	// Filter by innercolor IDs
-        //	if (dto.InnerColorsIds != null && dto.InnerColorsIds.Count > 0)
-        //	{
-        //		var activeInnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
-        //		var innerColors = activeInnerColors.Where(lan =>
-        //			dto.InnerColorsIds.Any(icId => lan.Id == icId)
-        //		);
+            var searchResults = await _context.Products
+                .Where(p => p.Name.Contains(searchTerm) && !p.SoftDelete)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Name,
+                    p.SellPrice,
+                    ImageUrl = "/client/image/product/" + p.ProductImages.FirstOrDefault(x => x.IsMain).Url
+                })
+                .ToListAsync();
 
-        //		query = query.Where(c => innerColors.Any(lan => lan.Id == c.InnerColor.Id)).ToList();
-        //	}
+            return Json(searchResults);
+        }
 
-        //	// Filter by minimum salary
-        //	//if (dto.MinPrice > 0)
-        //	//{
-        //	//    query = query.Where(Resume => Resume.SellPrice >= dto.MinPrice).ToList();
-        //	//}
 
-        //	//// Filter by maximum salary
-        //	//if (dto.MaxPrice < 20001)
-        //	//{
-        //	//    query = query.Where(Resume => Resume.SellPrice <= dto.MaxPrice).ToList();
-        //	//}
 
-        //	//// Filter by selected gender
-        //	//if (dto.Gender != Gender.None)
-        //	//{
-        //	//	query = query.Where(Resume => Resume.Gender == dto.Gender).ToList();
-        //	//}
-        //	return PartialView("_ProductPartial", query);
 
-        //}
+
+
+
 
 
 
@@ -499,6 +378,15 @@ namespace ChronoDialShop.Controllers
 }
 
 
+
+
+
+
+
+
+
+
+
 #region sortbook
 //public async Task<IActionResult> SortBooks(int id)
 //{
@@ -538,6 +426,215 @@ namespace ChronoDialShop.Controllers
 
 
 
+//[HttpPost]
+//public async Task<IActionResult> SortProducts(int id, ProductFilterVM dto)
+//{
+
+//	var data = await FilterProducts(dto);
+//	switch (id)
+//	{
+//		case 1:
+//			data = data.OrderBy(Resume => Resume.Name).ToList();
+//			break;
+
+//		case 2:
+//			data = data.OrderByDescending(Resume => Resume.Name).ToList();
+//			break;
+//		case 3:
+//			data = data.OrderByDescending(Resume => Resume.SellPrice).ToList();
+//			break;
+//		case 4:
+//			data = data.OrderBy(Resume => Resume.SellPrice).ToList();
+//			break;
+//		default:
+//			break;
+//	}
+//	return PartialView("_ProductPartial", data);
+//}
+
+//[HttpPost]
+//public async Task<List<Product>> FilterProducts(ProductFilterVM dto)
+//{
+//	var query = await _context.Products
+//						.Include(x => x.ProductImages)
+//						.Include(x => x.Brand)
+//						.Include(x => x.BandType)
+//						.Include(x => x.Vendor)
+//						.Include(x => x.InnerColor)
+//						.Include(x => x.Visualization)
+//						.Where(x => !x.SoftDelete)
+//						.ToListAsync();
+
+
+//	// Filter by brand IDs
+//	if (dto.BrandsIds != null && dto.BrandsIds.Count > 0)
+//	{
+//		var activeBrands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
+//		var brands = activeBrands.Where(cat =>
+//			dto.BrandsIds.Any(brandId => cat.Id == brandId)
+//		);
+
+//		query = query.Where(c => brands.Any(cat => cat.Id == c.Brand.Id)).ToList();
+
+//	}
+
+//	// Filter by bandtype IDs
+//	if (dto.BandTypesIds != null && dto.BandTypesIds.Count > 0)
+//	{
+//		var activeBandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+//		var bandTypes = activeBandTypes.Where(edu =>
+//			dto.BandTypesIds.Any(btId => edu.Id == btId)
+//		);
+
+//		query = query.Where(c => bandTypes.Any(edu => edu.Id == c.BandType.Id)).ToList();
+
+//	}
+
+//	// Filter by vendor IDs
+//	if (dto.VendorsIds != null && dto.VendorsIds.Count > 0)
+//	{
+//		var activeVendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
+//		var vendors = activeVendors.Where(lan =>
+//			dto.VendorsIds.Any(venId => lan.Id == venId)
+//		);
+
+//		query = query.Where(c => vendors.Any(lan => lan.Id == c.Vendor.Id)).ToList();
+//	}
+
+//	// Filter by visualization IDs
+//	if (dto.VisualizationsIds != null && dto.VisualizationsIds.Count > 0)
+//	{
+//		var activeVisualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
+//		var visualizations = activeVisualizations.Where(lan =>
+//			dto.VisualizationsIds.Any(visId => lan.Id == visId)
+//		);
+
+//		query = query.Where(c => visualizations.Any(lan => lan.Id == c.Visualization.Id)).ToList();
+//	}
+
+//	// Filter by innercolor IDs
+//	if (dto.InnerColorsIds != null && dto.InnerColorsIds.Count > 0)
+//	{
+//		var activeInnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
+//		var innerColors = activeInnerColors.Where(lan =>
+//			dto.InnerColorsIds.Any(icId => lan.Id == icId)
+//		);
+
+//		query = query.Where(c => innerColors.Any(lan => lan.Id == c.InnerColor.Id)).ToList();
+//	}
+
+//	// Filter by minimum salary
+//	//if (dto.MinPrice > 0)
+//	//{
+//	//	query = query.Where(Resume => Resume.SellPrice >= dto.MinPrice).ToList();
+//	//}
+
+//	//// Filter by maximum salary
+//	//if (dto.MaxPrice < 20001)
+//	//{
+//	//	query = query.Where(Resume => Resume.SellPrice <= dto.MaxPrice).ToList();
+//	//}
+
+//	//// Filter by selected gender
+//	//if (dto.Gender != Gender.None)
+//	//{
+//	//	query = query.Where(Resume => Resume.Gender == dto.Gender).ToList();
+//	//}
+//	return query;
+
+//}
+
+//[HttpPost]
+//public async Task<IActionResult> FilterViewProducts(ProductFilterVM dto)
+//{
+//	var query = await _context.Products
+//						.Include(x => x.ProductImages)
+//						.Include(x => x.Brand)
+//						.Include(x => x.BandType)
+//						.Include(x => x.Vendor)
+//						.Include(x => x.InnerColor)
+//						.Include(x => x.Visualization)
+//						.Where(x => !x.SoftDelete)
+//						.ToListAsync();
+
+
+//	// Filter by brand IDs
+//	if (dto.BrandsIds != null && dto.BrandsIds.Count > 0)
+//	{
+//		var activeBrands = await _context.Brands.Where(x => !x.SoftDelete).ToListAsync();
+//		var brands = activeBrands.Where(cat =>
+//			dto.BrandsIds.Any(brandId => cat.Id == brandId)
+//		);
+
+//		query = query.Where(c => brands.Any(cat => cat.Id == c.Brand.Id)).ToList();
+
+//	}
+
+//	// Filter by bandtype IDs
+//	if (dto.BandTypesIds != null && dto.BandTypesIds.Count > 0)
+//	{
+//		var activeBandTypes = await _context.BandTypes.Where(x => !x.SoftDelete).ToListAsync();
+//		var bandTypes = activeBandTypes.Where(edu =>
+//			dto.BandTypesIds.Any(btId => edu.Id == btId)
+//		);
+
+//		query = query.Where(c => bandTypes.Any(edu => edu.Id == c.BandType.Id)).ToList();
+
+//	}
+
+//	// Filter by vendor IDs
+//	if (dto.VendorsIds != null && dto.VendorsIds.Count > 0)
+//	{
+//		var activeVendors = await _context.Vendors.Where(x => !x.SoftDelete).ToListAsync();
+//		var vendors = activeVendors.Where(lan =>
+//			dto.VendorsIds.Any(venId => lan.Id == venId)
+//		);
+
+//		query = query.Where(c => vendors.Any(lan => lan.Id == c.Vendor.Id)).ToList();
+//	}
+
+//	// Filter by visualization IDs
+//	if (dto.VisualizationsIds != null && dto.VisualizationsIds.Count > 0)
+//	{
+//		var activeVisualizations = await _context.Visualizations.Where(x => !x.SoftDelete).ToListAsync();
+//		var visualizations = activeVisualizations.Where(lan =>
+//			dto.VisualizationsIds.Any(visId => lan.Id == visId)
+//		);
+
+//		query = query.Where(c => visualizations.Any(lan => lan.Id == c.Visualization.Id)).ToList();
+//	}
+
+//	// Filter by innercolor IDs
+//	if (dto.InnerColorsIds != null && dto.InnerColorsIds.Count > 0)
+//	{
+//		var activeInnerColors = await _context.InnerColors.Where(x => !x.SoftDelete).ToListAsync();
+//		var innerColors = activeInnerColors.Where(lan =>
+//			dto.InnerColorsIds.Any(icId => lan.Id == icId)
+//		);
+
+//		query = query.Where(c => innerColors.Any(lan => lan.Id == c.InnerColor.Id)).ToList();
+//	}
+
+//	// Filter by minimum salary
+//	//if (dto.MinPrice > 0)
+//	//{
+//	//    query = query.Where(Resume => Resume.SellPrice >= dto.MinPrice).ToList();
+//	//}
+
+//	//// Filter by maximum salary
+//	//if (dto.MaxPrice < 20001)
+//	//{
+//	//    query = query.Where(Resume => Resume.SellPrice <= dto.MaxPrice).ToList();
+//	//}
+
+//	//// Filter by selected gender
+//	//if (dto.Gender != Gender.None)
+//	//{
+//	//	query = query.Where(Resume => Resume.Gender == dto.Gender).ToList();
+//	//}
+//	return PartialView("_ProductPartial", query);
+
+//}
 
 
 
@@ -546,3 +643,71 @@ namespace ChronoDialShop.Controllers
 
 
 
+
+
+
+
+
+
+
+
+//public IActionResult ProductBrandFilter(int? id)
+//{
+//	return ViewComponent("ProductMain", new { brandId = id });
+//}
+
+#region InitialCodes
+
+//public async Task<IActionResult> AddToCart(int id)
+//{
+//    var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
+//    if (!existProduct) return NotFound();
+
+//    List<BasketVm>? basketVm = GetBasketFromCookies();
+//    BasketVm cartVm = basketVm.Find(x => x.Id == id);
+//    if (cartVm != null)
+//    {
+//        cartVm.Count++;
+//    }
+//    else
+//    {
+//        basketVm.Add(new BasketVm
+//        {
+//            Count = 1,
+//            Id = id
+//        });
+//    }
+//    Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+//    return RedirectToAction("Index");
+//}
+
+
+
+
+//public async Task<IActionResult> RemoveFromCart(int id)
+//{
+//    List<BasketVm>? basketVm = GetBasketFromCookies();
+//    BasketVm cartVm = basketVm.Find(x => x.Id == id);
+
+//    if (cartVm != null)
+//    {
+//        basketVm.Remove(cartVm);
+
+//    }
+//    Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketVm));
+//    return RedirectToAction("Index");
+//}
+
+
+//private List<BasketVm> GetBasketFromCookies()
+//{
+//    List<BasketVm> basketVms;
+//    if (Request.Cookies["basket"] != null)
+//    {
+//        basketVms = JsonConvert.DeserializeObject<List<BasketVm>>(Request.Cookies["basket"]);
+//    }
+//    else basketVms = new List<BasketVm>();
+//    return basketVms;
+//}
+
+#endregion

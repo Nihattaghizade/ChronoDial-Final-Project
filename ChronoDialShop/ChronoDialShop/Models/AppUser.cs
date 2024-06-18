@@ -9,4 +9,9 @@ public class AppUser : IdentityUser
     public string Surname { get; set; } = null!;
     [NotMapped]
     public string FullName { get => $"{Name} {Surname}"; }
+
+
+
+
+    public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
 }

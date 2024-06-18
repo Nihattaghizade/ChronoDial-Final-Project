@@ -17,7 +17,7 @@ public class CartPageViewComponent : ViewComponent
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        List<BasketVm>? basketVm = GetBasket();
+        List<BasketVm>? basketVm = GetBasketFromCookies();
         List<BasketItemVm> basketItemsVm = new List<BasketItemVm>();
         foreach (var basketData in basketVm)
         {
@@ -34,7 +34,7 @@ public class CartPageViewComponent : ViewComponent
 
         return View(basketItemsVm);
     }
-    private List<BasketVm> GetBasket()
+    private List<BasketVm> GetBasketFromCookies()
     {
         List<BasketVm> basketVms;
         if (Request.Cookies["basket"] != null)

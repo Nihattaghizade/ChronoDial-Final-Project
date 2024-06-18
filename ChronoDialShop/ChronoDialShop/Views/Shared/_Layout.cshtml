@@ -55,7 +55,7 @@
 
             <div class="mobileheader-downside">
                 <button class="searchButton mobileheader-button"> <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i> </button>
-                <a href="" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
+                <a asp-action="Wishlist" asp-controller="Product" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
                 <!-- <a href="" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a> -->
                 <!-- <button class="cart"> <div class="countbox"> <span class="count">1</span> </div> <div class="cartbuttondiv"><i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i></div> <span class="totalprice"> $110.00  <i class="fa-solid fa-chevron-down fa-2xs" style="color: #cbba9c;"></i> </span> </button> -->
                 <button class="mobileheader-button cart-button"> <i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i> </button>
@@ -75,8 +75,15 @@
 
             <div class="tabletheader-right">
                 <button class="searchButton mobileheader-button"> <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i> </button>
-                <a href="" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
-                <a href="" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a>
+                <a asp-action="Wishlist" asp-controller="Product" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
+                @* @if (User.Identity.IsAuthenticated)
+                {
+                    <a asp-action="LogOut" asp-controller="Account" class="mobileheader-button"> <span style="color:aliceblue;">@User.Identity.Name</span> <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> </a>
+                }
+                else
+                {
+                    <a asp-action="Login" asp-controller="Account" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a>
+                } *@
                 <!-- <button class="cart"> <div class="countbox"> <span class="count">1</span> </div> <div class="cartbuttondiv"><i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i></div> <span class="totalprice"> $110.00  <i class="fa-solid fa-chevron-down fa-2xs" style="color: #cbba9c;"></i> </span> </button> -->
                 <button class="mobileheader-button cart-button"> <i class="fa-solid fa-cart-shopping" style="color: #ffff;"></i> </button>
             </div>
@@ -98,8 +105,8 @@
                         <li class="altpages"><a href="">Contact</a></li>*@
                         <li class="altpages"><a asp-action="Login" asp-controller="Account">Login</a></li>
                         <li class="altpages"><a asp-action="Register" asp-controller="Account">Register</a></li>
-                        <li class="altpages"><a href="">Cart</a></li>
-                        <li class="altpages"><a href="">Wishlist</a></li>
+                        <li class="altpages"><a asp-action="Cart" asp-controller="Product">Cart</a></li>
+                        <li class="altpages"><a asp-action="Wishlist" asp-controller="Product">Wishlist</a></li>
                         <!-- <li  class="altpages"><a href="">Cehckout</a></li> -->
                     </ul>
                 </li>
@@ -139,48 +146,35 @@
                     <li class="pagelistbox"><a href="">Contact Us</a></li>*@
                     <li class="pagelistbox"><a asp-action="Login" asp-controller="Account">Login</a></li>
                     <li class="pagelistbox"><a asp-action="Register" asp-controller="Account">Register</a></li>
-                    <li class="pagelistbox"><a href="">Wishlist</a></li>
-                    <li class="pagelistbox"><a href="">Cart</a></li>
+                    <li class="pagelistbox"><a asp-action="Wishlist" asp-controller="Product">Wishlist</a></li>
+                    <li class="pagelistbox"><a asp-action="Cart" asp-controller="Product">Cart</a></li>
                 </ul>
             </nav>
         </div>
         <div class="menucontainerbelow">
-            <a style="color: #ffffff;" href=""> <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i> Log In</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a asp-action="LogOut" asp-controller="Account" class="mobileheader-button"> <span style="color:aliceblue;">@User.Identity.Name</span> <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> </a>
+            }
+            else
+            {
+                <a asp-action="Login" asp-controller="Account" class="mobileheader-button"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> </a>
+            }
         </div>
     </div>
 
-    <div class="searchsection hidden">
+@*     <div class="searchsection hidden">
         <div class="searchcontainer">
             <div class="inputcontainer">
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search" >
                 <button> <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i> </button>
             </div>
             <button class="searchCloseButton"> <i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i> </button>
         </div>
-        <div class="searchresultcontainer">
+        <div class="searchresultcontainer" >
             <p>Products</p>
-            <div class="searchedproductscontainer">
-                <a href="" class="searchedproducts">
-                    <div class="searchedproductimgbox">
-                        <img src="~/client/image/product/productimage.webp" alt="">
-                    </div>
-                    <div class="searchedproductinfobox">
-                        <h5>Casio Watch</h5>
-                        <span>$22.65</span>
-                    </div>
-                </a>
-
-                <a href="" class="searchedproducts">
-                    <div class="searchedproductimgbox">
-                        <img src="~/client/image/product/productimage.webp" alt="">
-                    </div>
-                    <div class="searchedproductinfobox">
-                        <h5>Casio Watch</h5>
-                        <span>$22.65</span>
-                    </div>
-                </a>
-
-                <a href="" class="searchedproducts">
+            <div class="searchedproductscontainer uygundatalar">
+               <a href="" class="searchedproducts">
                     <div class="searchedproductimgbox">
                         <img src="~/client/image/product/productimage.webp" alt="">
                     </div>
@@ -191,14 +185,48 @@
                 </a>
             </div>
         </div>
+    </div> *@
+
+    
+
+
+
+
+
+
+    <div class="searchsection hidden">
+        <div class="searchcontainer">
+            <div class="inputcontainer">
+                <input type="text" id="searchInput" placeholder="Search">
+                <button id="searchButton">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i>
+                </button>
+            </div>
+            <button class="searchCloseButton">
+                <i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i>
+            </button>
+        </div>
+        <div class="searchresultcontainer">
+            <p>Products</p>
+            <div class="searchedproductscontainer"></div>
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
 
     <div class="basketcontainer hidden">
         <div class="basketcontainerupper">
             <p>Your Cart</p>
             <button class="basketCloseButton"> <i class="fa-solid fa-x fa-lg" style="color: #000;"></i> </button>
         </div>
-        @await Component.InvokeAsync("Cart")
+        @await Component.InvokeAsync("Basket")
     </div>
     <!-- HeaderEnd -->
 
@@ -240,6 +268,52 @@
     <script src="~/client/js/homepage.js"></script>
     <script src="~/client/js/main.js"></script>
     <script src="~/client/js/shoppage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#searchInput').on('input', function () {
+                var searchTerm = $(this).val();
+                if (searchTerm.length >= 3) {
+                    $.ajax({
+                        url: '/Home/Search',
+                        type: 'POST',
+                        data: { searchTerm: searchTerm },
+                        success: function (data) {
+                            var searchResultsContainer = $('.searchedproductscontainer');
+                            searchResultsContainer.empty();
+
+                            if (data.length === 0) {
+                                searchResultsContainer.append('<p>No products found.</p>');
+                            } else {
+                                data.forEach(function (product) {
+                                    var productHtml = `
+                                            <a href="/Product/Detail/${product.id}" class="searchedproducts">
+                                                <div class="searchedproductimgbox">
+                                                    <img src="${product.imageUrl}" alt="${product.name}">
+                                                </div>
+                                                <div class="searchedproductinfobox">
+                                                    <h5>${product.name}</h5>
+                                                    <span>$${product.sellPrice.toFixed(2)}</span>
+                                                </div>
+                                            </a>
+                                        `;
+                                    searchResultsContainer.append(productHtml);
+                                });
+                            }
+                        },
+                        error: function () {
+                            alert('Error occurred while searching. Please try again.');
+                        }
+                    });
+                } else {
+                    $('.searchedproductscontainer').empty();
+                }
+            });
+        });
+    </script>
+
+    
     @await RenderSectionAsync("Scripts", false)
 </body>
 </html>

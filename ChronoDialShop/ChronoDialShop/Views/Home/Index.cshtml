@@ -1,4 +1,8 @@
-﻿<section class="homeslidesection">
+﻿@{
+    ViewData["Title"] = "Product Search";
+}
+
+<section class="homeslidesection">
     <div class="swiper mySwiper" id="slidecontainer">
         <div class="swiper-wrapper" id="slideinfocontainer">
             <div class="swiper-slide eachslide eachslidefirst">
@@ -104,24 +108,28 @@
 </section>
 
 @section Scripts {
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function openProductModal(productId) {
-            $.ajax({
-                type: 'GET',
-                url: '@Url.Action("OpenModal", "Home")',
-                data: { id: productId },
-                success: function (response) {
-                    $('#modalContainer').html(response);
-                    $('#productModal').modal('show');
+        $(document).ready(function () {
+            $('#searchInput').on('input', function () {
+                var searchTerm = $(this).val();
+                if (searchTerm.length >= 3) {
+                    $.ajax({
+                        url: '@Url.Action("Search", "Home")',
+                        type: 'POST',
+                        data: { searchTerm: searchTerm },
+                        success: function (data) {
+                            $('#searchResultsContainer').html(data);
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('An error occurred while fetching search results:', status, error);
+                            $('#searchResultsContainer').html('<p>An error occurred while fetching search results. Please try again later.</p>');
+                        }
+                    });
+                } else {
+                    $('#searchResultsContainer').html('');
                 }
             });
-        }
-
-        $(document).on('click', '.open-modal-button', function () {
-            var productId = $(this).data('product-id');
-            openProductModal(productId);
         });
     </script>
 }
