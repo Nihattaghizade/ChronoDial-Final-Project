@@ -6,8 +6,8 @@
 <section class="breadcrumbsection">
     <div class="breadcrumbcontainer">
         <div class="breadcrumbinfo">
-            <h1>Collection</h1>
-            <p> <a href="">Home</a> / <span>Shop</span> </p>
+            <h1>Login Account</h1>
+            <p> <a asp-action="Index" asp-controller="Home">Home</a> / <span>Login</span> </p>
         </div>
     </div>
 </section>
@@ -26,8 +26,8 @@
             <div class="text-danger" asp-validation-summary="ModelOnly" style="font-size:9x; color:orangered; text-align:center; margin-bottom:1rem;"></div>
             <button type="submit">SIGN IN</button>
             <div class="more">
-                <span>Forgot Your Password?</span>
-                <span><a href=""> Create Account</a></span>
+               @*  <span>Forgot Your Password?</span> *@
+                <span><a asp-action="Register" asp-controller="Account"> Create Account</a></span>
             </div>
         </form>
     </div>

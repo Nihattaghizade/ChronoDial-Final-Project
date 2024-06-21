@@ -113,7 +113,7 @@
             </ul>
             <div class="desktopheader-right">
                 <button class="searchButton mobileheader-button"> <i class="fa-solid fa-magnifying-glass" style="color: #ffff;"></i> </button>
-                <a href="" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
+                <a asp-action="Wishlist" asp-controller="Product" class="mobileheader-button"> <i class="fa-solid fa-heart" style="color: #ffffff;"></i> </a>
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a asp-action="LogOut" asp-controller="Account" class="mobileheader-button"> <span style="color:aliceblue;">@User.Identity.Name</span> <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> </a>
@@ -253,10 +253,10 @@
             </div>
             <div class="pagescontainer">
                 <h3>Menu</h3>
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Blog</a>
-                <a href="">Shop</a>
+                <a asp-action="Index" asp-controller="Home">Home</a>
+                @* <a href="">About</a>
+                <a href="">Blog</a> *@
+                <a asp-action="Index" asp-controller="Product">Shop</a>
             </div>
         </div>
     </footer>

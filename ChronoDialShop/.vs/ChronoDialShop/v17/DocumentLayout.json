@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\controllers\\bandtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\controllers\\bandtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\areas\\admin\\views\\shared\\404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\areas\\admin\\views\\shared\\404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|c:\\users\\99450\\onedrive\\masa\u00FCst\u00FC\\chronodial-final-project\\chronodialshop\\chronodialshop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4646DB5B-19C4-45ED-BEAA-ED9A8997E1CE}|ChronoDialShop\\ChronoDialShop.csproj|solutionrelative:chronodialshop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 13,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ChronoDialShop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ChronoDialShop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAAwJUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-18T20:01:06.337Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
@@ -60,6 +75,104 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAQwJUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T06:53:04.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:52:23.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:50:59.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BandTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\BandTypeController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Controllers\\BandTypeController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\BandTypeController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Controllers\\BandTypeController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwBsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:49:58.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "404.cshtml",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Views\\Shared\\404.cshtml",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Views\\Shared\\404.cshtml",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Views\\Shared\\404.cshtml",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Views\\Shared\\404.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T06:46:47.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBcBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:43:33.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAANMBAAAAAAAAAAAAwFABAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:43:21.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ChronoDialShop\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\99450\\OneDrive\\Masa\u00FCst\u00FC\\ChronoDial-Final-Project\\ChronoDialShop\\ChronoDialShop\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ChronoDialShop\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:37:42.806Z"
             }
           ]
         },

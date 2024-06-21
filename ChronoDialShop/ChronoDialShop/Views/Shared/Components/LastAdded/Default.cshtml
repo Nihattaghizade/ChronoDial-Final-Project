@@ -11,11 +11,9 @@
             <h3><a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a></h3>
              <div class="productfeatures">
                  <div class="ratingcon">
-                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                     <i class="fa-solid fa-star" style="color: #cbba9c;"></i>
-                     <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
-                     <i class="fa-solid fa-star" style="color: #d9d9d9;"></i>
+
+                    <p>@product.Brand.Name</p>
+
                  </div>
                  <div class="pricebox">
                     @if (product.DiscountPrice > 0)

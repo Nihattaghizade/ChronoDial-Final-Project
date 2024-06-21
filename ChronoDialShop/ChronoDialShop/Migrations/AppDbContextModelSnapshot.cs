@@ -166,6 +166,30 @@ namespace ChronoDialShop.Migrations
                     b.ToTable("Brands");
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.HomeSlider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeSliders");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.InnerColor", b =>
                 {
                     b.Property<int>("Id")
@@ -328,6 +352,34 @@ namespace ChronoDialShop.Migrations
                     b.ToTable("Sizes");
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.SliderImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("HomeSliderId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HomeSliderId");
+
+                    b.ToTable("SliderImages");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.Vendor", b =>
                 {
                     b.Property<int>("Id")
@@ -376,6 +428,33 @@ namespace ChronoDialShop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Visualizations");
+                });
+
+            modelBuilder.Entity("ChronoDialShop.Models.WishlistItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("WishlistItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -603,6 +682,17 @@ namespace ChronoDialShop.Migrations
                     b.Navigation("Size");
                 });
 
+            modelBuilder.Entity("ChronoDialShop.Models.SliderImage", b =>
+                {
+                    b.HasOne("ChronoDialShop.Models.HomeSlider", "HomeSlider")
+                        .WithMany("SliderImages")
+                        .HasForeignKey("HomeSliderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HomeSlider");
+                });
+
             modelBuilder.Entity("ChronoDialShop.Models.Vendor", b =>
                 {
                     b.HasOne("ChronoDialShop.Models.AppUser", "User")
@@ -610,6 +700,25 @@ namespace ChronoDialShop.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ChronoDialShop.Models.WishlistItem", b =>
+                {
+                    b.HasOne("ChronoDialShop.Models.Product", "Product")
+                        .WithMany("WishlistItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ChronoDialShop.Models.AppUser", "User")
+                        .WithMany("WishlistItems")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
@@ -668,6 +777,8 @@ namespace ChronoDialShop.Migrations
             modelBuilder.Entity("ChronoDialShop.Models.AppUser", b =>
                 {
                     b.Navigation("BasketItems");
+
+                    b.Navigation("WishlistItems");
                 });
 
             modelBuilder.Entity("ChronoDialShop.Models.BandType", b =>
@@ -678,6 +789,11 @@ namespace ChronoDialShop.Migrations
             modelBuilder.Entity("ChronoDialShop.Models.Brand", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ChronoDialShop.Models.HomeSlider", b =>
+                {
+                    b.Navigation("SliderImages");
                 });
 
             modelBuilder.Entity("ChronoDialShop.Models.InnerColor", b =>
@@ -692,6 +808,8 @@ namespace ChronoDialShop.Migrations
                     b.Navigation("ProductImages");
 
                     b.Navigation("ProductSize");
+
+                    b.Navigation("WishlistItems");
                 });
 
             modelBuilder.Entity("ChronoDialShop.Models.Size", b =>

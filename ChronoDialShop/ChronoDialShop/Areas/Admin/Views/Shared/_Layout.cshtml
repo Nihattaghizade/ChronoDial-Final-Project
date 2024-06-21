@@ -55,69 +55,93 @@
                     <img src="~/client/image/logo/chronodiallogo.webp" style="width: 200px;" />
                 </a>
                 <div class="navbar-nav w-100">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Brand</a>
+                    @* <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Home Slider</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Brand" asp-action="Index" class="dropdown-item">Brands List</a>
-                            <a asp-controller="Brand" asp-action="Create" class="dropdown-item">Brand Create</a>
+                            <a asp-controller="HomeSlider" asp-action="Index" class="dropdown-item">HomeSlider List</a>
+                            <a asp-controller="HomeSlider" asp-action="Create" class="dropdown-item">HomeSlider Create</a>
                         </div>
-                    </div>
+                    </div> *@
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Vendor</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Vendor" asp-action="Index" class="dropdown-item">Vendor List</a>
-                            <a asp-controller="Vendor" asp-action="Create" class="dropdown-item">Vendor Create</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Brand</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Brand" asp-action="Index" class="dropdown-item">Brands List</a>
+                                <a asp-controller="Brand" asp-action="Create" class="dropdown-item">Brand Create</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Products</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Product" asp-action="Index" class="dropdown-item">Product List</a>
-                            <a asp-controller="Product" asp-action="Create" class="dropdown-item">Product Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Vendor</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Vendor" asp-action="Index" class="dropdown-item">Vendor List</a>
+                                @* <a asp-controller="Vendor" asp-action="Create" class="dropdown-item">Vendor Create</a> *@
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Size</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Size" asp-action="Index" class="dropdown-item">Size List</a>
-                            <a asp-controller="Size" asp-action="Create" class="dropdown-item">Size Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Products</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Product" asp-action="Index" class="dropdown-item">Product List</a>
+                                <a asp-controller="Product" asp-action="Create" class="dropdown-item">Product Create</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>ProductSize</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="ProductSize" asp-action="Index" class="dropdown-item">ProductSize List</a>
-                            <a asp-controller="ProductSize" asp-action="Create" class="dropdown-item">ProductSize Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Size</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Size" asp-action="Index" class="dropdown-item">Size List</a>
+                                <a asp-controller="Size" asp-action="Create" class="dropdown-item">Size Create</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Visualization</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Visualization" asp-action="Index" class="dropdown-item">Visualization List</a>
-                            <a asp-controller="Visualization" asp-action="Create" class="dropdown-item">Visualization Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>ProductSize</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="ProductSize" asp-action="Index" class="dropdown-item">ProductSize List</a>
+                                <a asp-controller="ProductSize" asp-action="Create" class="dropdown-item">ProductSize Create</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>BandType</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="BandType" asp-action="Index" class="dropdown-item">BandType List</a>
-                            <a asp-controller="BandType" asp-action="Create" class="dropdown-item">BandType Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Visualization</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Visualization" asp-action="Index" class="dropdown-item">Visualization List</a>
+                                <a asp-controller="Visualization" asp-action="Create" class="dropdown-item">Visualization Create</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>InnerColor</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="InnerColor" asp-action="Index" class="dropdown-item">InnerColor List</a>
-                            <a asp-controller="InnerColor" asp-action="Create" class="dropdown-item">InnerColor Create</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>BandType</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="BandType" asp-action="Index" class="dropdown-item">BandType List</a>
+                                <a asp-controller="BandType" asp-action="Create" class="dropdown-item">BandType Create</a>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>InnerColor</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="InnerColor" asp-action="Index" class="dropdown-item">InnerColor List</a>
+                                <a asp-controller="InnerColor" asp-action="Create" class="dropdown-item">InnerColor Create</a>
+                            </div>
+                        </div>
+                    }
+
+                   
+                    @if (User.IsInRole("Vendor"))
+                    {
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Products</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                @* <a asp-controller="Product" asp-action="Index" class="dropdown-item">Product List</a> *@
+                                <a asp-controller="Product" asp-action="Create" class="dropdown-item">Product Create</a>
+                            </div>
+                        </div>
+                    }
+
                 </div>
             </nav>
         </div>

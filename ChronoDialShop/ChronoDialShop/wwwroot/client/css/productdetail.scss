@@ -47,6 +47,10 @@
                 height: auto; 
                 display: block;
             }
+
+            .big-slide{
+                width: 70%;
+            }
         }
     }
 
@@ -138,7 +142,7 @@
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
-            button{
+            a{
                 border: 2px solid #cbba9c;
                 padding: 8px;
                 transition: 0.3s ease;

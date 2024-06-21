@@ -1021,6 +1021,7 @@ footer .sharewithuscontainer .socialnetworks a:hover i {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #cbba9c;
+  justify-content: space-between;
 }
 .desktop-productsection .shopfullcontainer .shopfullcontainerright .resultcontainer .eachproduct .productinfobox .productfeatures .ratingcon {
   display: flex;

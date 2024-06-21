@@ -14,4 +14,5 @@ public class AppUser : IdentityUser
 
 
     public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
+    public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();
 }

@@ -19,7 +19,10 @@ namespace ChronoDialShop.Data;
     public DbSet<BandType> BandTypes { get; set; }
     public DbSet<InnerColor> InnerColors { get; set; }
     public DbSet<BasketItem> BasketItems { get; set; }
+    public DbSet<WishlistItem> WishlistItems { get; set; }
      public DbSet<AppUser> Users { get; set; }
+    public DbSet<HomeSlider> HomeSliders { get; set; }
+    public DbSet<SliderImage> SliderImages { get; set; }
 
 
 
@@ -37,6 +40,18 @@ namespace ChronoDialShop.Data;
         modelBuilder.Entity<BasketItem>()
             .HasOne(b => b.User)
             .WithMany(u => u.BasketItems)
+            .HasForeignKey(b => b.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<WishlistItem>()
+                .HasOne(b => b.Product)
+                .WithMany(p => p.WishlistItems)
+                .HasForeignKey(b => b.ProductId)
+                .OnDelete(DeleteBehavior.Restrict); // or DeleteBehavior.NoAction
+
+        modelBuilder.Entity<WishlistItem>()
+            .HasOne(b => b.User)
+            .WithMany(u => u.WishlistItems)
             .HasForeignKey(b => b.UserId)
             .OnDelete(DeleteBehavior.Restrict);
     }

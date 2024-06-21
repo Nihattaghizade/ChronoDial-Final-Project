@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ChronoDialShop.Areas.Admin.Controllers;
 [Area("Admin")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin,Vendor")]
 public class DashboardController : Controller
 {
     public IActionResult Index()

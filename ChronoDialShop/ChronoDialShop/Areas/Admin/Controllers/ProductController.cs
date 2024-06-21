@@ -23,6 +23,8 @@ public class ProductController : Controller
         _env = env;
         _userManager = userManager;
     }
+
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Index()
     {
         List<Product> products = await _context.Products
@@ -118,6 +120,7 @@ public class ProductController : Controller
     //    return RedirectToAction("Index");
     //}
 
+   
     public async Task<IActionResult> Create()
     {
         var user = await _userManager.GetUserAsync(User);
@@ -143,6 +146,7 @@ public class ProductController : Controller
         return View();
     }
 
+    
     [HttpPost]
     //[Authorize(Roles = "Admin,Vendor")]
     public async Task<IActionResult> Create(Product product)
@@ -240,6 +244,8 @@ public class ProductController : Controller
             Product = product
         };
     }
+
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Detail(int? id)
     {
         if (id == null || id <= 0) return BadRequest();
@@ -253,6 +259,7 @@ public class ProductController : Controller
         return View(product);
     }
 
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null || id < 1) return View("404");
@@ -367,7 +374,8 @@ public class ProductController : Controller
 
         return RedirectToAction("Index");
     }
-    
+
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
         Product? product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);

@@ -2,6 +2,7 @@
 using ChronoDialShop.Enums;
 using ChronoDialShop.Models;
 using ChronoDialShop.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -101,51 +102,143 @@ namespace ChronoDialShop.Controllers
 
 
 
+        //public async Task<IActionResult> AddToWishlist(int id)
+        //{
+        //    var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
+        //    if (!existProduct) return NotFound();
+
+        //    List<WishlistVm>? basketVm = GetWishlistFromCookies();
+        //    WishlistVm cartVm = basketVm.Find(x => x.Id == id);
+        //    if (cartVm == null)
+        //    {
+        //        basketVm.Add(new WishlistVm
+        //        {
+        //            Count = 1,
+        //            Id = id
+        //        });
+        //    }
+        //    Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
+        //    return RedirectToAction("Index");
+        //}
+
+
+
+        //public async Task<IActionResult> RemoveFromWishlist(int id)
+        //{
+        //    List<WishlistVm>? basketVm = GetWishlistFromCookies();
+        //    WishlistVm cartVm = basketVm.Find(x => x.Id == id);
+
+        //    if (cartVm != null)
+        //    {
+        //        basketVm.Remove(cartVm);
+
+        //    }
+        //    Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
+        //    return RedirectToAction("Index");
+        //}
+
+
+        //private List<WishlistVm> GetWishlistFromCookies()
+        //{
+        //    List<WishlistVm> basketVms;
+        //    if (Request.Cookies["wishlist"] != null)
+        //    {
+        //        basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["wishlist"]);
+        //    }
+        //    else basketVms = new List<WishlistVm>();
+        //    return basketVms;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+        [Authorize(Roles = "Costumer,Vendor")]
         public async Task<IActionResult> AddToWishlist(int id)
         {
             var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
             if (!existProduct) return NotFound();
 
-            List<WishlistVm>? basketVm = GetWishlistFromCookies();
-            WishlistVm cartVm = basketVm.Find(x => x.Id == id);
-            if (cartVm == null)
+            if (User.Identity.IsAuthenticated)
             {
-                basketVm.Add(new WishlistVm
+                var user = await _userManager.GetUserAsync(User);
+                var wishlistItem = await _context.WishlistItems
+                    .FirstOrDefaultAsync(x => x.ProductId == id && x.UserId == user.Id);
+
+                if (wishlistItem == null)
                 {
-                    Count = 1,
-                    Id = id
-                });
+                    _context.WishlistItems.Add(new WishlistItem
+                    {
+                        UserId = user.Id,
+                        ProductId = id,
+                        Count = 1
+                    });
+                    await _context.SaveChangesAsync();
+                }
             }
-            Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
+            else
+            {
+                List<WishlistVm>? wishlistVm = GetWishlistFromCookies();
+                WishlistVm wishlistItem = wishlistVm.Find(x => x.Id == id);
+                if (wishlistItem == null)
+                {
+                    wishlistVm.Add(new WishlistVm
+                    {
+                        Count = 1,
+                        Id = id
+                    });
+                }
+                Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlistVm));
+            }
             return RedirectToAction("Index");
         }
 
-
-
+        [Authorize(Roles = "Costumer,Vendor")]
         public async Task<IActionResult> RemoveFromWishlist(int id)
         {
-            List<WishlistVm>? basketVm = GetWishlistFromCookies();
-            WishlistVm cartVm = basketVm.Find(x => x.Id == id);
-
-            if (cartVm != null)
+            if (User.Identity.IsAuthenticated)
             {
-                basketVm.Remove(cartVm);
+                var user = await _userManager.GetUserAsync(User);
+                var wishlistItem = await _context.WishlistItems
+                    .FirstOrDefaultAsync(x => x.ProductId == id && x.UserId == user.Id);
 
+                if (wishlistItem != null)
+                {
+                    _context.WishlistItems.Remove(wishlistItem);
+                    await _context.SaveChangesAsync();
+                }
             }
-            Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(basketVm));
+            else
+            {
+                List<WishlistVm>? wishlistVm = GetWishlistFromCookies();
+                WishlistVm wishlistItem = wishlistVm.Find(x => x.Id == id);
+
+                if (wishlistItem != null)
+                {
+                    wishlistVm.Remove(wishlistItem);
+                }
+                Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlistVm));
+            }
             return RedirectToAction("Index");
         }
 
-
+        [Authorize(Roles = "Costumer,Vendor")]
         private List<WishlistVm> GetWishlistFromCookies()
         {
-            List<WishlistVm> basketVms;
+            List<WishlistVm> wishlistVms;
             if (Request.Cookies["wishlist"] != null)
             {
-                basketVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["wishlist"]);
+                wishlistVms = JsonConvert.DeserializeObject<List<WishlistVm>>(Request.Cookies["wishlist"]);
             }
-            else basketVms = new List<WishlistVm>();
-            return basketVms;
+            else wishlistVms = new List<WishlistVm>();
+            return wishlistVms;
         }
 
 
@@ -161,6 +254,8 @@ namespace ChronoDialShop.Controllers
 
 
 
+
+        [Authorize(Roles = "Costumer,Vendor")]
         public async Task<IActionResult> AddToCart(int id)
         {
             var existProduct = await _context.Products.AnyAsync(x => x.Id == id);
@@ -209,6 +304,7 @@ namespace ChronoDialShop.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Costumer,Vendor")]
         public async Task<IActionResult> RemoveFromCart(int id)
         {
             if (User.Identity.IsAuthenticated)
@@ -238,7 +334,7 @@ namespace ChronoDialShop.Controllers
         }
 
 
-
+        [Authorize(Roles = "Costumer,Vendor")]
         private List<BasketVm> GetBasketFromCookies()
         {
             List<BasketVm> basketVms;

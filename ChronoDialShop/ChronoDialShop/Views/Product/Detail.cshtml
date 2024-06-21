@@ -8,8 +8,8 @@
 <section class="breadcrumbsection">
     <div class="breadcrumbcontainer">
         <div class="breadcrumbinfo">
-            <h1>Product</h1>
-            <p> <a href="">Home</a> / <span>Shop</span> </p>
+            <h1>Product Detail</h1>
+            <p> <a asp-action="Index" asp-controller="Home">Home</a> / <span>Detail</span> </p>
         </div>
     </div>
 </section>
@@ -20,7 +20,7 @@
         <div class="imgcontainer">
             <!-- <img src="./image/product/productimage.webp" alt=""> -->
 
-            <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper mySwiper2 big-slide">
                 <div class="swiper-wrapper">
                     @foreach (var img in Model.Product.ProductImages)
                     {
@@ -112,18 +112,18 @@
                 <p class="featureleftword">Vendor</p>
                 <span>@Model.Product.Vendor.Name</span>
             </div>
-            <div class="quantitycontainer eachfeature">
+            @* <div class="quantitycontainer eachfeature">
                 <p class="featureleftword">Quantity</p>
                 <div class="inputcontainer">
                     <button class="decreasebtn"><i class="fa-solid fa-minus"></i></button>
                     <input type="number" name="" id="counter" min="1" value="1">
                     <button class="increasebtn"><i class="fa-solid fa-plus"></i></button>
                 </div>
-            </div>
+            </div> *@
         </div>
         <div class="mainbuttoncontainer">
-            <button><div>Add To Cart</div></button>
-            <button><div>Add To Wishlist</div></button>
+            <a asp-action="AddToCart" asp-controller="Product" asp-route-id="@Model.Product.Id"><div>Add To Cart</div></a>
+            <a asp-action="AddToWishlist" asp-controller="Product" asp-route-id="@Model.Product.Id"><div>Add To Wishlist</div></a>
         </div>
     </div>
 </section>

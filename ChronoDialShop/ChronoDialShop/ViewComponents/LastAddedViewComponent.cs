@@ -15,7 +15,7 @@ public class LastAddedViewComponent : ViewComponent
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        var products = await _context.Products
+        var products = await _context.Products.Include(x => x.Brand)
             .Include(x => x.ProductImages)
             .Where(x => !x.SoftDelete)
             .OrderByDescending(x => x.Id).Take(6).ToListAsync();

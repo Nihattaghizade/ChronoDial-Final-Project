@@ -852,6 +852,9 @@ footer .sharewithuscontainer .socialnetworks a:hover i {
   height: auto;
   display: block;
 }
+.detailuppersection .img-slidecontainer .imgcontainer .big-slide {
+  width: 70%;
+}
 .detailuppersection .productinfocontainer {
   margin-top: 2rem;
 }
@@ -934,21 +937,21 @@ footer .sharewithuscontainer .socialnetworks a:hover i {
   gap: 8px;
   flex-wrap: wrap;
 }
-.detailuppersection .productinfocontainer .mainbuttoncontainer button {
+.detailuppersection .productinfocontainer .mainbuttoncontainer a {
   border: 2px solid #cbba9c;
   padding: 8px;
   transition: 0.3s ease;
 }
-.detailuppersection .productinfocontainer .mainbuttoncontainer button div {
+.detailuppersection .productinfocontainer .mainbuttoncontainer a div {
   font-size: 1.2rem;
   padding: 8px;
   color: #cbba9c;
   transition: 0.3s ease;
 }
-.detailuppersection .productinfocontainer .mainbuttoncontainer button:hover {
+.detailuppersection .productinfocontainer .mainbuttoncontainer a:hover {
   background-color: #cbba9c;
 }
-.detailuppersection .productinfocontainer .mainbuttoncontainer button:hover div {
+.detailuppersection .productinfocontainer .mainbuttoncontainer a:hover div {
   color: #fff;
   border: 2px solid #fff;
 }/*# sourceMappingURL=productdetail.css.map */

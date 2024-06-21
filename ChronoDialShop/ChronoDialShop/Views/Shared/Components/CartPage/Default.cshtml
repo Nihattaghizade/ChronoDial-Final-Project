@@ -1,7 +1,7 @@
 ﻿@model List<BasketItemVm>
-@*@{
+@* @{
     decimal totalPrice = Model.Sum(x => x.Count * x.Price);
-}*@
+} *@
 
 @foreach(var product in Model)
 {
@@ -12,7 +12,7 @@
             </div>
             <div class="infoside">
                 @*<div class="brend">Qua Timer</div>*@
-                <div class="name">@product.Name</div>
+                <a asp-action="Detail" asp-controller="Product" asp-route-id="@product.Id" class="name">@product.Name</a>
                 <div class="price proitem">$@product.Price</div>
                 @*<div class="size proitem">Size: 24mm</div>
                 <div class="color proitem">Color: Silver</div>
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="totalside">
-            <span>$@product.Price*@product.Count</span>
+            <span>$@product.Price x @product.Count</span>
         </div>
     </div>
 }
